@@ -836,9 +836,10 @@
    ],
    "camera": {
     "9x16": {
-     "anchor": "close",
+     "anchor": "mid",
      "move": "punch-in",
-     "punchAtSec": 0.3
+     "punchAtSec": 0.3,
+     "amount": 0.25
     },
     "16x9": {
      "anchor": "close",
@@ -918,7 +919,7 @@
    ],
    "camera": {
     "9x16": {
-     "anchor": "close",
+     "anchor": "mid",
      "move": "push-in"
     },
     "16x9": {
@@ -962,12 +963,14 @@
     "9x16": {
      "anchor": "mid",
      "move": "punch-in",
-     "punchAtSec": 0.4
+     "punchAtSec": 0.4,
+     "amount": 0.2
     },
     "16x9": {
      "anchor": "mid",
      "move": "punch-in",
-     "punchAtSec": 0.4
+     "punchAtSec": 0.4,
+     "amount": 0.2
     }
    },
    "focus": "bramble",

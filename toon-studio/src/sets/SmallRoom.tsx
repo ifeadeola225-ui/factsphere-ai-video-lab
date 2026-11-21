@@ -148,16 +148,16 @@ const Desk: React.FC<{position: [number, number, number]}> = ({position}) => (
   </group>
 );
 
-const Window: React.FC<{position: [number, number, number]}> = ({position}) => (
+const Window: React.FC<{position: [number, number, number]; night?: boolean}> = ({position, night = false}) => (
   <group position={position}>
     {/* sky + distant rooftops seen through the window */}
     {/* sky sits 0.07 in FRONT of the wall plane (window group is at z -5.85, wall at -6) to avoid z-fighting flicker */}
     <mesh position={[0, 0, -0.08]}>
       <planeGeometry args={[3.6, 3.2]} />
-      <meshBasicMaterial map={skyTex('#7FBCEB', '#D6ECF8')} toneMapped={false} />
+      <meshBasicMaterial map={night ? skyTex('#1E2A55', '#4A5F9C', false) : skyTex('#7FBCEB', '#D6ECF8')} toneMapped={false} />
     </mesh>
     {[-1.2, -0.3, 0.7, 1.4].map((x, i) => (
-      <mesh key={i} position={[x, -1.2 + (i % 2) * 0.25, -0.05]} material={T(['#B9C6D6', '#A9B8CC'][i % 2])}>
+      <mesh key={i} position={[x, -1.2 + (i % 2) * 0.25, -0.05]} material={T(night ? ['#2E3A66', '#25305A'][i % 2] : ['#B9C6D6', '#A9B8CC'][i % 2])}>
         <boxGeometry args={[0.8, 1.2 + (i % 3) * 0.4, 0.02]} />
       </mesh>
     ))}
@@ -201,7 +201,7 @@ const Plant: React.FC<{position: [number, number, number]; scale?: number}> = ({
   </group>
 );
 
-export const SmallRoom: React.FC<{showFgPlant?: boolean}> = ({showFgPlant = true}) => (
+export const SmallRoom: React.FC<{showFgPlant?: boolean; night?: boolean}> = ({showFgPlant = true, night = false}) => (
   <group>
     {/* floor */}
     <mesh rotation={[-Math.PI / 2, 0, 0]} receiveShadow>
@@ -234,7 +234,7 @@ export const SmallRoom: React.FC<{showFgPlant?: boolean}> = ({showFgPlant = true
       <planeGeometry args={[20, 14]} />
       <meshToonMaterial map={plasterTex(C.wallBlush, [3, 2])} gradientMap={GRADIENT_SET} />
     </mesh>
-    <Window position={[2.6, 5.6, -5.85]} />
+    <Window position={[2.6, 5.6, -5.85]} night={night} />
     <Shelf position={[-4.2, 0, -5.4]} />
     <Desk position={[4.2, 0, -3.6]} />
     {/* framed picture */}

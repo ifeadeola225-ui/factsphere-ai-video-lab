@@ -40,11 +40,12 @@ export type SceneProps = {
   vignette?: number;
   /** 2D overlay (tint, heat haze, flash) drawn over the 3D but under captions. */
   overlay?: React.ReactNode;
+  keyPos?: [number, number, number];
   children: React.ReactNode;
 };
 
 /** One shot = set + light + camera (from shotlist per format) + post FX. */
-export const ShotScene: React.FC<SceneProps> = ({shot, anchors, light, background, fog, focus, moveAmount, bokeh = 5, bloom = 0.6, vignette = 0.4, overlay, children}) => {
+export const ShotScene: React.FC<SceneProps> = ({shot, anchors, light, background, fog, focus, moveAmount, bokeh = 5, bloom = 0.6, vignette = 0.4, overlay, keyPos, children}) => {
   const {frame, fps} = useShotTime();
   const fmt = useFormat();
   const cfg = shot.camera[fmt];
@@ -54,7 +55,7 @@ export const ShotScene: React.FC<SceneProps> = ({shot, anchors, light, backgroun
   const cam = cameraAt(anchor, cfg.move as Move, frame, fps, dur, {amount: moveAmount ?? cfg.amount, punchAtSec: cfg.punchAtSec});
   return (
     <AbsoluteFill>
-      <Stage cam={cam} light={light} background={background} fog={fog}>
+      <Stage cam={cam} light={light} background={background} fog={fog} keyPos={keyPos}>
         {children}
         <Fx focus={focus} bokehScale={bokeh} focusRange={1.8} bloom={bloom} vignette={vignette} />
       </Stage>

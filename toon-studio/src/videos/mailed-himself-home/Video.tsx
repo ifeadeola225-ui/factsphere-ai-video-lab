@@ -4,6 +4,7 @@ import {loadFont} from '@remotion/fonts';
 import {SHOTLIST, type Shot} from './kit';
 import * as B1 from './shots/batch1';
 import * as B2 from './shots/batch2';
+import * as B3 from './shots/batch3';
 
 loadFont({family: 'Bangers', url: staticFile('fonts/Bangers.woff2'), weight: '400'});
 
@@ -24,6 +25,13 @@ export const SHOT_COMPONENTS: Record<string, React.FC<{shot: Shot}>> = {
   s14: B2.S14,
   s15: B2.S15,
   s16: B2.S16,
+  s17: B3.S17,
+  s18: B3.S18,
+  s19: B3.S19,
+  s20: B3.S20,
+  s21: B3.S21,
+  s22: B3.S22,
+  s23: B3.S23,
 };
 
 /** Placeholder for shots not built yet (STATE 7 in progress). */

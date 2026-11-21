@@ -45,7 +45,7 @@ const HEMI = {
 } as const;
 
 /** A3.3 lighting rig, softened per the brief (lighter shadows, stronger fill). */
-export const Lights: React.FC<{preset: LightPreset; shadowSize?: number}> = ({preset, shadowSize = 12}) => {
+export const Lights: React.FC<{preset: LightPreset; shadowSize?: number; keyPos?: [number, number, number]}> = ({preset, shadowSize = 12, keyPos}) => {
   const k = KEY[preset];
   const h = HEMI[preset];
   return (
@@ -54,7 +54,7 @@ export const Lights: React.FC<{preset: LightPreset; shadowSize?: number}> = ({pr
       <directionalLight
         color={k.color}
         intensity={k.intensity}
-        position={k.pos as unknown as [number, number, number]}
+        position={keyPos ?? (k.pos as unknown as [number, number, number])}
         castShadow
         shadow-mapSize={[2048, 2048]}
         shadow-bias={-0.0004}
@@ -78,11 +78,13 @@ export type StageProps = {
   light?: LightPreset;
   background?: string;
   fog?: {color: string; near: number; far: number};
+  /** Frame-driven key light position (e.g. a sun sweeping across the sky). */
+  keyPos?: [number, number, number];
   children: React.ReactNode;
 };
 
 /** A2.2: ThreeCanvas sized from useVideoConfig, with lights, shadows and the camera rig. */
-export const Stage: React.FC<StageProps> = ({cam, light = 'interior', background = '#EFE6D2', fog, children}) => {
+export const Stage: React.FC<StageProps> = ({cam, light = 'interior', background = '#EFE6D2', fog, keyPos, children}) => {
   const {width, height} = useVideoConfig();
   return (
     <ThreeCanvas
@@ -96,7 +98,7 @@ export const Stage: React.FC<StageProps> = ({cam, light = 'interior', background
       <color attach="background" args={[background]} />
       {fog ? <fog attach="fog" args={[fog.color, fog.near, fog.far]} /> : null}
       <CameraRig cam={cam} />
-      <Lights preset={light} />
+      <Lights preset={light} keyPos={keyPos} />
       {children}
     </ThreeCanvas>
   );
