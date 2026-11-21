@@ -124,12 +124,13 @@ const Desk: React.FC<{position: [number, number, number]}> = ({position}) => (
 const Window: React.FC<{position: [number, number, number]}> = ({position}) => (
   <group position={position}>
     {/* sky + distant rooftops seen through the window */}
-    <mesh position={[0, 0, -0.15]}>
+    {/* sky sits 0.07 in FRONT of the wall plane (window group is at z -5.85, wall at -6) to avoid z-fighting flicker */}
+    <mesh position={[0, 0, -0.08]}>
       <planeGeometry args={[3.6, 3.2]} />
       <meshBasicMaterial map={skyTex('#7FBCEB', '#D6ECF8')} toneMapped={false} />
     </mesh>
     {[-1.2, -0.3, 0.7, 1.4].map((x, i) => (
-      <mesh key={i} position={[x, -1.2 + (i % 2) * 0.25, -0.1]} material={T(['#B9C6D6', '#A9B8CC'][i % 2])}>
+      <mesh key={i} position={[x, -1.2 + (i % 2) * 0.25, -0.05]} material={T(['#B9C6D6', '#A9B8CC'][i % 2])}>
         <boxGeometry args={[0.8, 1.2 + (i % 3) * 0.4, 0.02]} />
       </mesh>
     ))}
