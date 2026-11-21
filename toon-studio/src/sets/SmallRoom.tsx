@@ -36,40 +36,67 @@ export const SMALL_ROOM_ANCHORS: Record<'wide' | 'mid' | 'close' | 'low_fg' | 'h
 
 const T = (c: string) => toonMat(c);
 
-const Book: React.FC<{p: [number, number, number]; h: number; w: number; color: string; tilt?: number}> = ({p, h, w, color, tilt = 0}) => (
-  <mesh position={[p[0], p[1] + h / 2, p[2]]} rotation={[0, 0, tilt]} material={T(color)} castShadow>
-    <boxGeometry args={[w, h, 0.55]} />
-    <Ink w={0.018} />
-  </mesh>
-);
-
+// Open bookshelf: real sides, top, bottom and a thin back panel, so the books sit in an actual cavity.
+// No coplanar faces anywhere: book fronts stop 0.05 behind the board fronts, books float 0.005 above boards.
 const Shelf: React.FC<{position: [number, number, number]}> = ({position}) => {
   const r = mulberry32(42);
   const colors = [C.burgundy, C.teal, C.warmYellow, C.navy, C.turquoise, C.earth, C.cream];
-  const rows = [0.15, 1.65, 3.15];
+  const W = 3.2, H = 4.6, D = 0.8, th = 0.15; // outer size, board thickness
+  const rows = [th, 1.6, 3.05]; // board tops
+  const boardZ = 0.0; // boards span z -0.4..0.4 (front at +0.4)
+  const bookD = 0.55; // books span z -0.3..+0.25 (fronts 0.15 behind the board front)
   return (
     <group position={position}>
-      {/* frame */}
-      <mesh position={[0, 2.3, 0]} material={T(C.deskWood)} castShadow receiveShadow>
-        <boxGeometry args={[3.2, 4.6, 0.8]} />
+      {/* back panel (dark), sides, top, bottom */}
+      <mesh position={[0, H / 2, -D / 2 + 0.03]} material={T('#4A2C18')} receiveShadow>
+        <boxGeometry args={[W - 2 * th, H - 2 * th, 0.06]} />
+      </mesh>
+      {[-1, 1].map((s2) => (
+        <mesh key={s2} position={[s2 * (W / 2 - th / 2), H / 2, 0]} material={T(C.deskWood)} castShadow receiveShadow>
+          <boxGeometry args={[th, H, D]} />
+          <Ink w={0.03} />
+        </mesh>
+      ))}
+      <mesh position={[0, H - th / 2, 0]} material={T(C.deskWood)} castShadow>
+        <boxGeometry args={[W, th, D]} />
         <Ink w={0.03} />
       </mesh>
-      <mesh position={[0, 2.3, 0.12]} material={T('#5E3A22')}>
-        <boxGeometry args={[2.9, 4.3, 0.6]} />
-      </mesh>
       {rows.map((y, ri) => {
-        let x = -1.3;
+        let x = -W / 2 + th + 0.08;
         const books = [];
-        while (x < 1.15) {
+        const end = W / 2 - th - 0.08;
+        while (x < end - 0.3) {
           const w = 0.16 + r() * 0.12;
-          const h = 0.85 + r() * 0.45;
-          books.push(<Book key={x} p={[x + w / 2, y + 0.1, 0.25]} h={h} w={w} color={colors[Math.floor(r() * colors.length)]} tilt={r() < 0.1 ? 0.25 : 0} />);
-          x += w + 0.03;
+          const h = 0.85 + r() * 0.4;
+          const color = T(colors[Math.floor(r() * colors.length)]);
+          const room = end - (x + w);
+          // Leaning book: only as the last book in a row, tipping right into free space,
+          // pivoting on its bottom-right corner so it never cuts into a neighbour.
+          if (room > 0.5 && room < 0.9 && r() < 0.6) {
+            const lean = 0.32;
+            books.push(
+              <group key={x} position={[x + w, y + 0.005, -0.025]} rotation={[0, 0, -lean]}>
+                <mesh position={[-w / 2, h / 2, 0]} material={color} castShadow>
+                  <boxGeometry args={[w, h, bookD]} />
+                  <Ink w={0.028} />
+                </mesh>
+              </group>,
+            );
+            break;
+          }
+          books.push(
+            <mesh key={x} position={[x + w / 2, y + 0.005 + h / 2, -0.025]} material={color} castShadow>
+              <boxGeometry args={[w, h, bookD]} />
+              <Ink w={0.028} />
+            </mesh>,
+          );
+          x += w + 0.035;
         }
         return (
           <group key={ri}>
-            <mesh position={[0, y + 0.05, 0.2]} material={T(C.deskWood)} receiveShadow>
-              <boxGeometry args={[2.9, 0.1, 0.65]} />
+            <mesh position={[0, y - th / 2, boardZ]} material={T(C.deskWood)} receiveShadow castShadow>
+              <boxGeometry args={[W - 2 * th - 0.002, th, D]} />
+              <Ink w={0.02} />
             </mesh>
             {books}
           </group>
@@ -110,7 +137,7 @@ const Desk: React.FC<{position: [number, number, number]}> = ({position}) => (
     </mesh>
     <pointLight position={[1.3, 3.7, -0.2]} color={'#FFC98A'} intensity={6} distance={9} decay={1.6} />
     {/* papers + mug */}
-    <mesh position={[-0.6, 2.48, 0.1]} rotation={[0, 0.2, 0]} material={T(C.white)}>
+    <mesh position={[-0.6, 2.5, 0.1]} rotation={[0, 0.2, 0]} material={T(C.white)}>
       <boxGeometry args={[0.9, 0.04, 1.1]} />
       <Ink w={0.012} />
     </mesh>
@@ -186,7 +213,7 @@ export const SmallRoom: React.FC<{showFgPlant?: boolean}> = ({showFgPlant = true
       <circleGeometry args={[3.2, 48]} />
       <meshToonMaterial color={C.burgundy} gradientMap={GRADIENT_SET} />
     </mesh>
-    <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.025, 0.5]} receiveShadow>
+    <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.04, 0.5]} receiveShadow>
       <ringGeometry args={[2.6, 2.8, 48]} />
       <meshToonMaterial color={C.warmYellow} gradientMap={GRADIENT_SET} />
     </mesh>
