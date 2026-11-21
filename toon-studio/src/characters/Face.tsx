@@ -110,26 +110,26 @@ export const Face: React.FC<FaceProps> = ({expression, blink = 0, talk = 0}) => 
     const pitch = EY + lookP;
     const p = onHead(yaw, pitch, 1, 0.0);
     if (s.eyes === 'happy') {
-      return <Arc key={side} yaw={side * EX} pitch={EY - 0.02} radius={0.075} tube={0.026} arc={Math.PI} spin={0} />;
+      return <Arc key={`happy${side}`} yaw={side * EX} pitch={EY - 0.02} radius={0.075} tube={0.026} arc={Math.PI} spin={0} />;
     }
     if (s.eyes === 'closed' || blink > 0.85) {
-      return <Bar key={side} yaw={side * EX} pitch={EY - 0.01} len={0.12} tube={0.022} />;
+      return <Bar key={`closed${side}`} yaw={side * EX} pitch={EY - 0.01} len={0.12} tube={0.022} />;
     }
     if (s.eyes === 'wide') {
       return (
-        <group key={side} position={p.position} rotation={p.rotation}>
-          <mesh material={whiteMat} position={[0, 0, 0.01]} scale={[0.15, 0.17 * sy, 1]}>
+        <group key={`wide${side}`} position={p.position} rotation={p.rotation}>
+          <mesh material={whiteMat} position={[0, 0, 0.022]} scale={[0.15, 0.17 * sy, 1]}>
             <circleGeometry args={[1, 24]} />
           </mesh>
-          <mesh material={inkMat} position={[0, 0, 0.008]} scale={[0.17, 0.19 * sy, 1]}>
+          <mesh material={inkMat} position={[0, 0, 0.006]} scale={[0.17, 0.19 * sy, 1]}>
             <circleGeometry args={[1, 24]} />
           </mesh>
-          <mesh material={inkMat} position={[0, 0, 0.02]} scale={[0.045, 0.05 * sy, 1]} geometry={dotGeo} />
+          <mesh material={inkMat} position={[0, 0, 0.04]} scale={[0.045, 0.05 * sy, 1]} geometry={dotGeo} />
         </group>
       );
     }
     return (
-      <group key={side} position={p.position} rotation={p.rotation}>
+      <group key={`open${side}`} position={p.position} rotation={p.rotation}>
         <mesh material={inkMat} geometry={eyeGeo} scale={[0.085, 0.115 * sy, 0.03]} />
         {sy > 0.5 ? (
           <mesh material={whiteMat} geometry={dotGeo} position={[0.028, 0.04 * sy, 0.031]} scale={[0.025, 0.025, 1]} />
@@ -163,42 +163,42 @@ export const Face: React.FC<FaceProps> = ({expression, blink = 0, talk = 0}) => 
     const p = onHead(0, MP - 0.02);
     const k = s.mouth === 'o' ? 1 : openAmt;
     mouth = (
-      <group position={p.position} rotation={p.rotation}>
+      <group key="mouth-o" position={p.position} rotation={p.rotation}>
         <mesh material={inkMat} position={[0, 0, 0.004]} scale={[0.085, 0.06 + 0.06 * k, 1]}>
           <circleGeometry args={[1, 24]} />
         </mesh>
-        <mesh material={mouthInMat} position={[0, -0.005, 0.01]} scale={[0.06, 0.04 + 0.045 * k, 1]}>
+        <mesh material={mouthInMat} position={[0, -0.005, 0.022]} scale={[0.06, 0.04 + 0.045 * k, 1]}>
           <circleGeometry args={[1, 24]} />
         </mesh>
       </group>
     );
   } else if (s.mouth === 'flat') {
-    mouth = <Bar yaw={0} pitch={MP} len={0.14} tube={0.02} />;
+    mouth = <Bar key="mouth-flat" yaw={0} pitch={MP} len={0.14} tube={0.02} />;
   } else if (s.mouth === 'smile') {
-    mouth = <Arc yaw={0} pitch={MP + 0.03} radius={0.11} tube={0.022} arc={Math.PI * 0.75} spin={Math.PI * 1.125} />;
+    mouth = <Arc key="mouth-smile" yaw={0} pitch={MP + 0.03} radius={0.11} tube={0.022} arc={Math.PI * 0.75} spin={Math.PI * 1.125} />;
   } else if (s.mouth === 'grin') {
     const p = onHead(0, MP + 0.01);
     mouth = (
-      <group position={p.position} rotation={p.rotation}>
+      <group key="mouth-grin" position={p.position} rotation={p.rotation}>
         <mesh material={inkMat} position={[0, 0, 0.004]} rotation={[0, 0, Math.PI]}>
           <circleGeometry args={[0.13, 24, 0, Math.PI]} />
         </mesh>
-        <mesh material={mouthInMat} position={[0, -0.02, 0.01]} rotation={[0, 0, Math.PI]}>
+        <mesh material={mouthInMat} position={[0, -0.02, 0.022]} rotation={[0, 0, Math.PI]}>
           <circleGeometry args={[0.1, 24, 0, Math.PI]} />
         </mesh>
       </group>
     );
   } else if (s.mouth === 'smirk') {
-    mouth = <Arc yaw={0.05} pitch={MP + 0.03} radius={0.12} tube={0.022} arc={Math.PI * 0.5} spin={Math.PI * 1.35} />;
+    mouth = <Arc key="mouth-smirk" yaw={0.05} pitch={MP + 0.03} radius={0.12} tube={0.022} arc={Math.PI * 0.5} spin={Math.PI * 1.35} />;
   } else if (s.mouth === 'frown') {
-    mouth = <Arc yaw={0} pitch={MP - 0.06} radius={0.11} tube={0.022} arc={Math.PI * 0.6} spin={Math.PI * 0.2} />;
+    mouth = <Arc key="mouth-frown" yaw={0} pitch={MP - 0.06} radius={0.11} tube={0.022} arc={Math.PI * 0.6} spin={Math.PI * 0.2} />;
   } else {
     // wobble: two short opposing arcs
     mouth = (
-      <>
+      <React.Fragment key="mouth-wobble">
         <Arc yaw={-0.05} pitch={MP} radius={0.05} tube={0.018} arc={Math.PI * 0.8} spin={Math.PI * 0.1} />
         <Arc yaw={0.05} pitch={MP} radius={0.05} tube={0.018} arc={Math.PI * 0.8} spin={Math.PI * 1.1} />
-      </>
+      </React.Fragment>
     );
   }
 

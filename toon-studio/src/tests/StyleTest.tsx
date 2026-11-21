@@ -45,7 +45,7 @@ export const StyleTest: React.FC = () => {
     <AbsoluteFill>
       <Stage cam={cam} light="interior" background={C.wallButter} fog={{color: '#F3E2C0', near: 22, far: 60}}>
         <SmallRoom />
-        <Character look={CAST.everyman} joints={j} expression={expression} blink={blinkAt(frame, fps, seed)} facing={facing} />
+        <Character look={CAST.odd.look} joints={j} expression={expression} blink={blinkAt(frame, fps, seed)} facing={facing} />
         <Fx focus={focus} bokehScale={5} focusRange={1.6} bloom={0.6} vignette={0.4} />
       </Stage>
       <WordCaptions words={WORDS} />

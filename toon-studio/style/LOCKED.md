@@ -11,7 +11,7 @@ Approved style and rule decisions, newest last. These override `MODEL_BRIEF.md` 
 
 ## STATE 2: style lock
 
-### Round 1: candidate values (pending approval)
+### Round 1: APPROVED and locked (styletest_v1b)
 
 - Outline: inverted hull in world units. Head 4.2% R, torso 3.5% R, hair 3–3.5% R, props 2–3%. Color `#160502`.
 - Proportions: head R 1, head center y 5.2, figure height ≈ 6.3 R (head ≈ 32%). Torso capsule r 0.72 × len 1.0, z-scale 0.85. Limbs r 0.045. Hands are dark dots (r 0.11).
@@ -22,3 +22,5 @@ Approved style and rule decisions, newest last. These override `MODEL_BRIEF.md` 
 - Bloom 0.6 (threshold 0.85). Vignette 0.4. No tone mapping (palette hexes render true).
 - Captions: Bangers (bundled locally), ALL CAPS. 9:16: 70 px at y 64%, 7 px stroke. 16:9: 58 px at y 84%. Emphasis words are gold `#FFC94A` at ×1.12.
 - Light: interior rig (warm key `#FFE6C4` 2.2, hemisphere 1.3, cool rim 0.5) plus warm practical lamps.
+- Set-building rule (from the window and shelf fixes): no two visible surfaces may share a plane. Keep a gap of at least 0.03 units between stacked or inset surfaces. Every preview runs `tools/flicker_check.py`.
+- Silent test renders are expected until STATE 5. Always say so when sending a test.
