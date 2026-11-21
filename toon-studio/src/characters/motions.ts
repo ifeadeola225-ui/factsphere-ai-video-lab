@@ -111,13 +111,13 @@ export const motion = (
       // anticipation squash 0.92 (3 frames) → stretch 1.08, arms up, shocked, hold
       out.squash = interpolate(tf, [0, 3, 7, 14], [1, 0.92, 1.08, 1.02], {...clamp, easing: Easing.out(Easing.quad)});
       const up = springAt(frame, fps, startSec + 0.1, 11);
-      out.joints = mix(out.joints, {...out.joints, lArm: arm(1.95, 0.35, 0.75, 0), rArm: arm(1.95, 0.35, 0.75, 0), lean: -0.06, headPitch: -0.08}, up);
+      out.joints = mix(out.joints, {...out.joints, lArm: arm(2.35, 0.3, 0.45, 0), rArm: arm(2.35, 0.3, 0.45, 0), lean: -0.06, headPitch: -0.08}, up);
       if (tf >= 2) out.expression = 'shocked';
       return out;
     }
 
     case 'jump': {
-      // squash, launch, overshoot, land with a squash
+      // squash, launch, overshoot, land with a squash. Arms/legs BLEND in and out (no 1-frame snaps).
       const crouch = 0.25, air = 0.55;
       out.squash =
         t < crouch
@@ -125,12 +125,17 @@ export const motion = (
           : t < crouch + air
             ? interpolate(t, [crouch, crouch + 0.1, crouch + air], [1.12, 1.03, 1.0], clamp)
             : interpolate(t, [crouch + air, crouch + air + 0.08, crouch + air + 0.3], [0.86, 1.04, 1], clamp);
-      if (t >= crouch && t < crouch + air) {
-        const k = (t - crouch) / air;
-        out.rootY = Math.sin(k * Math.PI) * 1.8;
-        out.joints = {...out.joints, lArm: arm(2.4, 0.2, -0.2), rArm: arm(2.4, 0.2, -0.2), lKnee: 0.5, rKnee: 0.5, lLeg: -0.3, rLeg: -0.3};
-        out.expression = 'happy';
-      }
+      if (t >= crouch && t < crouch + air) out.rootY = Math.sin(((t - crouch) / air) * Math.PI) * 1.8;
+      // pose weight: arms swing back in the crouch, up in the air, settle 0.25 s after landing
+      const up = interpolate(t, [crouch - 0.08, crouch + 0.08, crouch + air - 0.1, crouch + air + 0.25], [0, 1, 1, 0], {
+        ...clamp,
+        easing: Easing.inOut(Easing.quad),
+      });
+      const back = interpolate(t, [0, crouch - 0.05, crouch + 0.05], [0, 1, 0], clamp);
+      const airPose = {...out.joints, lArm: arm(2.4, 0.2, -0.2), rArm: arm(2.4, 0.2, -0.2), lKnee: 0.5, rKnee: 0.5, lLeg: -0.3, rLeg: -0.3};
+      const crouchPose = {...out.joints, lArm: arm(0.25, -0.5, 0.1), rArm: arm(0.25, -0.5, 0.1), lKnee: 0.35, rKnee: 0.35, lLeg: -0.2, rLeg: -0.2};
+      out.joints = mix(mix(out.joints, crouchPose, back), airPose, up);
+      if (up > 0.5) out.expression = 'happy';
       return out;
     }
 
