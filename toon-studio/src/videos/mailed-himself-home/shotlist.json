@@ -170,7 +170,7 @@
    "focus": "reg",
    "emphasis": [],
    "sfx": [
-    "whoosh@1.2"
+    "whoosh@1.3"
    ]
   },
   {
@@ -263,7 +263,7 @@
     "wallet"
    ],
    "sfx": [
-    "swipe@0.6"
+    "swipe@0.42"
    ]
   },
   {
@@ -305,7 +305,7 @@
    "focus": "reg",
    "emphasis": [],
    "sfx": [
-    "gasp-sting@0.2"
+    "gasp-sting@0.15"
    ]
   },
   {
@@ -401,9 +401,9 @@
     "crate"
    ],
    "sfx": [
-    "hammer-tap@0.4",
-    "hammer-tap@0.8",
-    "hammer-tap@1.2"
+    "hammer-tap@0.22",
+    "hammer-tap@0.62",
+    "hammer-tap@1.02"
    ]
   },
   {
@@ -697,7 +697,7 @@
    "focus": "crate",
    "emphasis": [],
    "sfx": [
-    "thud@0.4"
+    "thud@0.05"
    ]
   },
   {
@@ -1052,8 +1052,8 @@
     "pocketknife"
    ],
    "sfx": [
-    "wood-crack@0.5",
-    "plank-fall@0.9"
+    "wood-crack@0.15",
+    "plank-fall@0.95"
    ]
   },
   {
@@ -1092,7 +1092,7 @@
    "focus": "reg",
    "emphasis": [],
    "sfx": [
-    "car-pass@1.0"
+    "car-pass@0.28"
    ]
   },
   {
@@ -1186,7 +1186,7 @@
    "focus": "bramble",
    "emphasis": [],
    "sfx": [
-    "paper-unroll@0.3"
+    "paper-unroll@0.2"
    ]
   },
   {

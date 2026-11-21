@@ -9,6 +9,7 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
+    "resolveJsonModule": true,
     "lib": ["DOM", "ES2022"]
   },
   "include": ["src", "remotion.config.ts"]
