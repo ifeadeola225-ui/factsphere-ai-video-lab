@@ -111,7 +111,7 @@ export const motion = (
       // anticipation squash 0.92 (3 frames) → stretch 1.08, arms up, shocked, hold
       out.squash = interpolate(tf, [0, 3, 7, 14], [1, 0.92, 1.08, 1.02], {...clamp, easing: Easing.out(Easing.quad)});
       const up = springAt(frame, fps, startSec + 0.1, 11);
-      out.joints = mix(out.joints, {...out.joints, lArm: arm(1.0, 0.6, 1.9, 0.3), rArm: arm(1.0, 0.6, 1.9, 0.3), lean: -0.06, headPitch: -0.08}, up);
+      out.joints = mix(out.joints, {...out.joints, lArm: arm(1.95, 0.35, 0.75, 0), rArm: arm(1.95, 0.35, 0.75, 0), lean: -0.06, headPitch: -0.08}, up);
       if (tf >= 2) out.expression = 'shocked';
       return out;
     }

@@ -103,3 +103,31 @@ export const skyTex = (top: string, bottom: string, clouds = true) =>
       g.globalAlpha = 1;
     }
   }, [1, 1]);
+
+/** Short sign / label text on a colored card (A6: clean sans, 1–3 words). */
+export const textTex = (text: string, bg: string, fg: string, w = 512, h = 256) => {
+  const key = `text${text}${bg}${fg}${w}x${h}`;
+  const hit = cache.get(key);
+  if (hit) return hit;
+  const canvas = document.createElement('canvas');
+  canvas.width = w;
+  canvas.height = h;
+  const g = canvas.getContext('2d')!;
+  g.fillStyle = bg;
+  g.fillRect(0, 0, w, h);
+  g.fillStyle = fg;
+  g.textAlign = 'center';
+  g.textBaseline = 'middle';
+  let size = h * 0.55;
+  g.font = `900 ${size}px "Arial Black", "Helvetica Neue", Arial, sans-serif`;
+  while (g.measureText(text).width > w * 0.86 && size > 10) {
+    size -= 4;
+    g.font = `900 ${size}px "Arial Black", "Helvetica Neue", Arial, sans-serif`;
+  }
+  g.fillText(text, w / 2, h / 2 + size * 0.04);
+  const tex = new THREE.CanvasTexture(canvas);
+  tex.colorSpace = THREE.SRGBColorSpace;
+  tex.anisotropy = 8;
+  cache.set(key, tex);
+  return tex;
+};

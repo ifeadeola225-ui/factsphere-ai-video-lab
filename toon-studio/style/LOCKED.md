@@ -24,3 +24,19 @@ Approved style and rule decisions, newest last. These override `MODEL_BRIEF.md` 
 - Light: interior rig (warm key `#FFE6C4` 2.2, hemisphere 1.3, cool rim 0.5) plus warm practical lamps.
 - Set-building rule (from the window and shelf fixes): no two visible surfaces may share a plane. Keep a gap of at least 0.03 units between stacked or inset surfaces. Every preview runs `tools/flicker_check.py`.
 - Silent test renders are expected until STATE 5. Always say so when sending a test.
+
+## STATE 3: cast, sets and props (proposed; pending approval)
+
+- Cast (`src/characters/cast.ts`):
+  - ODD: teal hoodie, swoop tuft, cream head.
+  - Dr. Wren: lab coat, round glasses, gray tufts.
+  - Mr. Bramble: burgundy suit, bowler hat, mustache.
+  - Mae: mustard sweater, bun, glasses.
+  - Gus: lavender knit, green beanie, stubble.
+  - The Ruler: navy robe, crown, beard.
+  - Crowd extras use seeded palette colors.
+- Sets (`src/sets/library.tsx`): small room, office, hospital room, palace hall, restaurant kitchen, street, countryside, classroom/lab. Every set has wide, mid, close, low_fg and high anchors for both formats.
+- Engineering rules learned:
+  - Give each variant of a swappable part (eyes, mouths) its own React key, so expression changes rebuild it cleanly.
+  - Hair is hidden under closed hats (beanie, cap, chef).
+  - Face layers keep at least 0.015 depth between stacked discs.
