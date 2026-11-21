@@ -12,7 +12,7 @@ import {Box, Cyl, Glow, Sign, SkyBackdrop, Window, makeAnchors, type Anchors} fr
 /* ───────── AIRFIELD ───────── variants: day-london | fog | hot-bombay */
 export type AirVariant = 'day-london' | 'fog' | 'hot-bombay';
 
-export const Airfield: React.FC<{variant: AirVariant; plane?: boolean}> = ({variant, plane = true}) => {
+export const Airfield: React.FC<{variant: AirVariant; plane?: boolean; cart?: boolean}> = ({variant, plane = true, cart = true}) => {
   const hot = variant === 'hot-bombay';
   const sky = hot ? (['#F7B267', '#FCE3B4'] as const) : variant === 'fog' ? (['#C9D3DC', '#E6ECF0'] as const) : (['#9FB8CC', '#DCE6EE'] as const);
   return (
@@ -50,7 +50,7 @@ export const Airfield: React.FC<{variant: AirVariant; plane?: boolean}> = ({vari
         </mesh>
         <Box p={[0, 3.5, 8.1]} s={[10, 7, 0.2]} c={'#4A5568'} ink={0.04} />
       </group>
-      {plane ? <Airliner position={[2, 0, -14]} rotation={[0, -0.35, 0]} /> : null}
+      {plane ? <Airliner position={[2, 0, -19]} rotation={[0, -0.35, 0]} /> : null}
       {hot ? (
         <>
           <PalmTree position={[-12, 0, -10]} s={1.1} />
@@ -73,7 +73,7 @@ export const Airfield: React.FC<{variant: AirVariant; plane?: boolean}> = ({vari
           <Cyl p={[-5.6, 1.8, -7.1]} r1={0.1} h={3.6} c={C.deskWood} ink={0.015} seg={8} />
         </>
       ) : null}
-      <LuggageCart position={[6.5, 0, -2]} rotation={[0, -0.3, 0]} />
+      {cart ? <LuggageCart position={[6.5, 0, -2]} rotation={[0, -0.3, 0]} /> : null}
     </group>
   );
 };

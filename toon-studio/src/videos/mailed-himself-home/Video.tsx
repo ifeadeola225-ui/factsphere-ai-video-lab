@@ -3,6 +3,7 @@ import {AbsoluteFill, Sequence, staticFile, useCurrentFrame, useVideoConfig} fro
 import {loadFont} from '@remotion/fonts';
 import {SHOTLIST, type Shot} from './kit';
 import * as B1 from './shots/batch1';
+import * as B2 from './shots/batch2';
 
 loadFont({family: 'Bangers', url: staticFile('fonts/Bangers.woff2'), weight: '400'});
 
@@ -15,6 +16,14 @@ export const SHOT_COMPONENTS: Record<string, React.FC<{shot: Shot}>> = {
   s06: B1.S06,
   s07: B1.S07,
   s08: B1.S08,
+  s09: B2.S09,
+  s10: B2.S10,
+  s11: B2.S11,
+  s12: B2.S12,
+  s13: B2.S13,
+  s14: B2.S14,
+  s15: B2.S15,
+  s16: B2.S16,
 };
 
 /** Placeholder for shots not built yet (STATE 7 in progress). */

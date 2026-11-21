@@ -370,7 +370,7 @@
    ],
    "camera": {
     "9x16": {
-     "anchor": "mid",
+     "anchor": "wide",
      "move": "push-in"
     },
     "16x9": {
@@ -463,7 +463,7 @@
    ],
    "camera": {
     "9x16": {
-     "anchor": "high",
+     "anchor": "wide",
      "move": "orbit"
     },
     "16x9": {
@@ -474,8 +474,8 @@
    "focus": "reg",
    "emphasis": [],
    "sfx": [
-    "pop@food",
-    "pop@water"
+    "pop@1.18",
+    "pop@1.81"
    ]
   },
   {
@@ -516,7 +516,7 @@
    "emphasis": [],
    "sfx": [
     "click@0.2",
-    "pop@bottle"
+    "pop@1.62"
    ]
   },
   {
@@ -533,12 +533,12 @@
     "9x16": {
      "anchor": "insert_label",
      "move": "punch-in",
-     "punchAtSec": 0.9
+     "punchAtSec": 1.0
     },
     "16x9": {
      "anchor": "insert_label",
      "move": "punch-in",
-     "punchAtSec": 0.9
+     "punchAtSec": 1.0
     }
    },
    "focus": "label",
@@ -548,7 +548,7 @@
     "delivery."
    ],
    "sfx": [
-    "stamp-thunk@0.9"
+    "stamp-thunk@1.0"
    ],
    "note": "insert: rubber stamp slams CASH ON DELIVERY onto the crate"
   },
@@ -617,7 +617,7 @@
    ],
    "camera": {
     "9x16": {
-     "anchor": "mid",
+     "anchor": "wide",
      "move": "drift-left"
     },
     "16x9": {
@@ -654,11 +654,11 @@
    ],
    "camera": {
     "9x16": {
-     "anchor": "low_fg",
+     "anchor": "mid",
      "move": "push-in"
     },
     "16x9": {
-     "anchor": "low_fg",
+     "anchor": "mid",
      "move": "push-in"
     }
    },
