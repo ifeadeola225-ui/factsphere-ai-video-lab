@@ -3,9 +3,81 @@
 Source: `model/model.pdf` ("2.5D Cartoon Animation Model", 22 pages; plain text in `model/model.txt`).
 Pages 1–2: four Shorts transcripts. Pages 3–18: four long-form transcripts. Pages 18–21: the visual style spec and a scene prompt template. Pages 21–22: the channel's master settings.
 
-**Important:** the PDF has **no style frames** (it contains no embedded images). So every hex value below is **proposed from the written color names, not sampled from images**. STATE 2 compares against this written spec unless the user uploads 4–10 reference screenshots.
+The PDF has no style frames. The user then supplied a **reference video**, "He Got Rich Selling Water" (`model/ref_water.mp4`: 9:16, 720×1280, 87 s, 30 fps), saying "something like this". Frames from it are in `model/frames/`.
 
-The PDF says: "When in doubt go with the plugin settings." Where the PDF is silent, the reference defaults (A1–A11) apply.
+**Priority order:** `LOCKED.md` > **section 0 (the reference video)** > the rest of this brief (the PDF) > the plugin reference defaults. Where section 0 conflicts with sections 2–8, section 0 wins.
+
+---
+
+## 0. Visual target: the reference video (overrides)
+
+**Overall:** a cinematic 3D cartoon. Flat, inked 2D-looking stick characters stand in rich, fully lit 3D sets, with a strong depth-of-field blur, bloom on practical lights, haze, weather particles and a soft vignette. It's more cinematic and more moody than the PDF's "bright educational" wording. Night, rain and lantern-lit interiors are allowed, **as long as faces stay brightly lit and readable**.
+
+### 0.1 Characters (measured from the frames)
+
+| Part | What the reference shows | Our spec (R = head radius) |
+|---|---|---|
+| Head | Big circle, **warm cream** with a smooth soft light gradient, never stepped. Picks up a tint from the scene light (pinkish in snow, golden indoors). Thick dark outline. | Sphere R 1. Base `#FFEFCD`, shade side `#F3DCC0`. A smooth gradient map, not a hard 2–3 step. Outline ≈ **4% R**. |
+| Proportions | Head ≈ **30–32%** of standing height. The figure is tall and lanky, **not** big-head-on-tiny-body. | Total height ≈ 6.4 R. Torso ≈ 2.3 R tall. Legs ≈ 2.1 R. |
+| Torso | A tall, narrow **bullet/capsule** about 0.75× the head's width, holding the clothing (suit with gold buttons, scarf, tie, dress, striped shirt). Outlined. | Capsule radius 0.72, length 1.0. Clothing is drawn as flat decals and extruded shapes. |
+| Arms / legs | Very thin, dark brown-black lines. Arms bend at the elbow; hands on hips is a signature pose. Long legs. | Capsule radius 0.045, `#160502`. |
+| Hands / feet | Tiny **dark dots** / small dark ovals | Hands r 0.11 dark; feet small flattened ellipsoids |
+| Eyes | Small black ovals with a **tiny white highlight**. Half-lidded "smug" lines and closed "content" lines are common. | Keep the highlight dot (this reverses the brief's earlier choice). Eyes ≈ 0.09 × 0.12. |
+| Brows | **Thick, bold curved brows**: the main emotion driver (angry V, smug raised, sad tilt) | Always visible, thick (tube ≈ 0.055) |
+| Mouth | Thin small line or arc; small open oval for surprise | Same |
+| Nose / ears / blush | None (blush only when the scene is cold-lit) | None |
+| Hair | A **2D-style tuft cap** in brown (`#8C4A1B`) with **spikes that poke past the outline** | Cap shell plus 4–6 cone spikes, outlined |
+| Extras | Mustaches, stubble dots, round glasses, top hats, bandanas, straw hats, sailor caps, flat caps | Prop and hat kit in STATE 3 |
+| Skin variety | Mostly cream heads; some peach or brown | Cream is the default (it also suits ODD) |
+
+### 0.2 Environments, light and post FX
+
+- **Sets:** detailed, believable 3D spaces with real geometry: a harbor with wooden docks and ships, a snowy town and frozen pond, a wood-paneled office with candles, a rainy brick alley, a green-lamp bank, an old ship's hold. They're textured like painted illustrations, more detailed than our "pastel, simple" plan.
+- **Depth of field: strong.** The background is heavily blurred in almost every character shot (this reverses the brief's earlier "light DOF" choice; it's the reference A3.4 default again). bokehScale ≈ 3–4.
+- **Bloom and glow:** warm practical lights (lamps, candles, lanterns, string lights) bloom strongly. A soft glow wraps the edges of bright windows.
+- **Atmosphere:** falling snow, rain streaks, drifting dust, fog. These are seeded particle systems.
+- **Grade:** warm and slightly filmic. Mid-high saturation, deep but not crushed shadows, vignette ≈ 0.4.
+- **Lighting mood follows the story beat:** sunny and saturated (harbor), cold blue-pink (snow), moody teal-green (bank, at night), amber (lantern, interiors).
+
+### 0.3 Sampled colors
+
+| Swatch | Hex |
+|---|---|
+| Head cream / cream in warm light | `#FFEFCD` / `#FDFDE4` |
+| Head in cold (snow) light | `#FDCBC7` |
+| Outline / limbs | `#160502` to `#1E0E0F` (warm near-black) |
+| Hair brown | `#8C4A1B` |
+| Navy suit | `#162047` |
+| Scarf / tie red | `#DB1F23` |
+| Yellow dress | `#F2BB0B` |
+| Crate / light wood | `#F3C27B` |
+| Dock wood | `#9D6227` |
+| Office wood wall / red carpet | `#8E5331` / `#811F10` |
+
+The brand teal, turquoise and navy from section 3 still apply to ODD and the channel identity.
+
+### 0.4 Camera and cutting
+
+- Mostly medium and medium-close shots on the character, with occasional wides (ship at sea, harbor) and inserts (money pile, a crate stamped "ICE").
+- Slow push-ins and drifts. Characters are framed centrally in 9:16, head in the upper third.
+- Cuts come fast, about every 2–3 s, on phrase boundaries.
+- Big comic moments get a payoff shot (raining money, a door slam).
+
+### 0.5 Captions (overrides section 8)
+
+- **ALL CAPS, bold italic comic font.** We use **Bangers** (Google Fonts) as the closest free match.
+- White fill, black stroke about 6 px, and a soft drop shadow.
+- **Small:** cap height ≈ 4% of frame width. That's about 64–72 px in 9:16 at 1080 wide, much smaller than the plugin's 92–100 px.
+- Position: **y ≈ 62–66%** in 9:16, centered, sitting over the character's torso. In 16:9, the lower band (A3.7).
+- One or two words at a time (short phrases like "THE PONDS", "HE HAD AN IDEA." stay together). Keep punctuation.
+
+### 0.6 Story style seen in the reference
+
+A third-person true story about money and history: a hustler, a failed idea, ridicule and a comeback, ending in riches. It runs 87 s, so the reference's Shorts run longer than the PDF's 45–60 s. It's the same hook → escalation → doubt → payoff formula as section 9.
+
+### 0.7 Originality guardrails
+
+We copy the **style** (stick-figure toon in cinematic 3D), never the reference channel's **characters or stories**. Our cast won't reuse their hero's look (brown spiky hair, navy suit, red scarf) or their topics. ODD keeps a distinct identity: brand teal, a different hair shape, and a recognizable accessory.
 
 ---
 
@@ -154,18 +226,20 @@ The PDF asks for **4K**. **Chosen: 1080p for builds and previews, with an option
 
 | Topic | Reference | PDF | Chosen |
 |---|---|---|---|
-| Style frames | Expected | None supplied | Written spec only; screenshots can be added later |
-| Shading | 3-step | Flat, minimal | 2-step on characters, soft 3-step on sets |
-| Head / torso | 38%, torso r 0.62 | Bigger head, narrow body | 40%, torso r 0.5 |
-| Hands | Skin spheres | Tiny black circles | Black circles |
-| Eyes / brows / blush | Highlight dot; brows hidden; blush on | Tiny eyes, expressive brows, minimal face | Tiny eyes, no highlight; brows always on; blush off |
+| Style frames | Expected | None supplied | **Reference video supplied: section 0 sets the look** |
+| Shading | 3-step | Flat, minimal | Smooth soft gradient on characters (per the video), soft 3-step on sets |
+| Head / torso | 38%, torso r 0.62 | Bigger head, narrow body | **Per the video:** head ≈ 31%, tall bullet torso r 0.72, long legs |
+| Hands | Skin spheres | Tiny black circles | Dark dots |
+| Eyes / brows / blush | Highlight dot; brows hidden; blush on | Tiny eyes, expressive brows, minimal face | Small eyes **with** highlight; thick brows always on; blush off |
 | Palette | Warm beige / mustard | Teal, navy, yellow, white, sky, earthy, pastel | New palette (section 3) |
-| Depth of field | Strong, always | Not mentioned, "crisp" | Light DOF plus atmospheric fog |
+| Depth of field | Strong, always | Not mentioned, "crisp" | **Strong (per the video)**, plus bloom, haze and particles |
 | Motion | Full A5 | Conflicting | Full 3D (Master Style) plus a `hold` mode |
 | Sets | Bank hall, town square | Palaces, hospitals, streets | Palace hall and classroom/lab replace those two |
 | Comic panels | None | Optional | Added as an overlay component |
-| Shorts length | 40–58 s | 45–60 s | 45–60 s |
 | Long-form | 8–12 min of fact chapters | 4–8 min serialized "What If" | What If formula, original world, 4–8 min target |
 | Topic lanes | Money, banks, weird laws… | History, behavior, science, inventions, mysteries | PDF lanes |
 | Voice | Stability 0.45 | 0.50 | 0.50 |
 | Resolution | 1080p | 4K | 1080p, optional 4K final |
+| Mood / darkness | Warm, cozy | Avoid overly dark scenes | Cinematic moods allowed (night, rain); faces always well-lit |
+| Captions | Fredoka, 92–100 px, middle band | — | **Bangers ALL CAPS, about 68 px, y ≈ 64%** |
+| Shorts length | 40–58 s | 45–60 s | 45–60 s target; up to about 90 s allowed (the reference runs 87 s) |
