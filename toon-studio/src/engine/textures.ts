@@ -79,3 +79,27 @@ export const checkerTex = (a: string, b: string, repeat: [number, number] = [4, 
         g.fillRect(x * 64, y * 64, 64, 64);
       }
   }, repeat);
+
+/** Vertical sky gradient (top → bottom) with a few soft clouds, for windows. */
+export const skyTex = (top: string, bottom: string, clouds = true) =>
+  make(`sky${top}${bottom}${clouds}`, 512, (g, r) => {
+    const grad = g.createLinearGradient(0, 0, 0, 512);
+    grad.addColorStop(0, top);
+    grad.addColorStop(1, bottom);
+    g.fillStyle = grad;
+    g.fillRect(0, 0, 512, 512);
+    if (clouds) {
+      g.fillStyle = '#FFFFFF';
+      for (let c = 0; c < 4; c++) {
+        const cx = r() * 512;
+        const cy = 80 + r() * 200;
+        g.globalAlpha = 0.75;
+        for (let i = 0; i < 6; i++) {
+          g.beginPath();
+          g.arc(cx + (i - 3) * 22, cy + Math.sin(i) * 8, 26 + r() * 16, 0, Math.PI * 2);
+          g.fill();
+        }
+      }
+      g.globalAlpha = 1;
+    }
+  }, [1, 1]);
