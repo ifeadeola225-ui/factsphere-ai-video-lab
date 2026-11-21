@@ -1,0 +1,1115 @@
+[
+ {
+  "text": "In",
+  "startMs": 0,
+  "endMs": 170,
+  "timestampMs": 85,
+  "confidence": null
+ },
+ {
+  "text": "1964",
+  "startMs": 170,
+  "endMs": 1330,
+  "timestampMs": 750,
+  "confidence": null
+ },
+ {
+  "text": "a",
+  "startMs": 1480,
+  "endMs": 1540,
+  "timestampMs": 1510,
+  "confidence": null
+ },
+ {
+  "text": "man",
+  "startMs": 1540,
+  "endMs": 1830,
+  "timestampMs": 1685,
+  "confidence": null
+ },
+ {
+  "text": "flew",
+  "startMs": 1830,
+  "endMs": 2070,
+  "timestampMs": 1950,
+  "confidence": null
+ },
+ {
+  "text": "from",
+  "startMs": 2070,
+  "endMs": 2270,
+  "timestampMs": 2170,
+  "confidence": null
+ },
+ {
+  "text": "London",
+  "startMs": 2270,
+  "endMs": 2630,
+  "timestampMs": 2450,
+  "confidence": null
+ },
+ {
+  "text": "to",
+  "startMs": 2630,
+  "endMs": 2760,
+  "timestampMs": 2695,
+  "confidence": null
+ },
+ {
+  "text": "Australia",
+  "startMs": 2760,
+  "endMs": 3370,
+  "timestampMs": 3065,
+  "confidence": null
+ },
+ {
+  "text": "with",
+  "startMs": 3370,
+  "endMs": 3620,
+  "timestampMs": 3495,
+  "confidence": null
+ },
+ {
+  "text": "no",
+  "startMs": 3620,
+  "endMs": 3840,
+  "timestampMs": 3730,
+  "confidence": null
+ },
+ {
+  "text": "ticket.",
+  "startMs": 3840,
+  "endMs": 4350,
+  "timestampMs": 4095,
+  "confidence": null
+ },
+ {
+  "text": "He",
+  "startMs": 4710,
+  "endMs": 4850,
+  "timestampMs": 4780,
+  "confidence": null
+ },
+ {
+  "text": "mailed",
+  "startMs": 4850,
+  "endMs": 5160,
+  "timestampMs": 5005,
+  "confidence": null
+ },
+ {
+  "text": "himself.",
+  "startMs": 5160,
+  "endMs": 5720,
+  "timestampMs": 5440,
+  "confidence": null
+ },
+ {
+  "text": "Reg",
+  "startMs": 6100,
+  "endMs": 6330,
+  "timestampMs": 6215,
+  "confidence": null
+ },
+ {
+  "text": "Spiers,",
+  "startMs": 6330,
+  "endMs": 6940,
+  "timestampMs": 6635,
+  "confidence": null
+ },
+ {
+  "text": "a",
+  "startMs": 7120,
+  "endMs": 7190,
+  "timestampMs": 7155,
+  "confidence": null
+ },
+ {
+  "text": "javelin",
+  "startMs": 7190,
+  "endMs": 7710,
+  "timestampMs": 7450,
+  "confidence": null
+ },
+ {
+  "text": "thrower,",
+  "startMs": 7710,
+  "endMs": 8120,
+  "timestampMs": 7915,
+  "confidence": null
+ },
+ {
+  "text": "is",
+  "startMs": 8310,
+  "endMs": 8440,
+  "timestampMs": 8375,
+  "confidence": null
+ },
+ {
+  "text": "stuck",
+  "startMs": 8440,
+  "endMs": 8740,
+  "timestampMs": 8590,
+  "confidence": null
+ },
+ {
+  "text": "in",
+  "startMs": 8740,
+  "endMs": 8840,
+  "timestampMs": 8790,
+  "confidence": null
+ },
+ {
+  "text": "London.",
+  "startMs": 8840,
+  "endMs": 9340,
+  "timestampMs": 9090,
+  "confidence": null
+ },
+ {
+  "text": "Thieves",
+  "startMs": 9730,
+  "endMs": 10070,
+  "timestampMs": 9900,
+  "confidence": null
+ },
+ {
+  "text": "took",
+  "startMs": 10070,
+  "endMs": 10260,
+  "timestampMs": 10165,
+  "confidence": null
+ },
+ {
+  "text": "his",
+  "startMs": 10260,
+  "endMs": 10420,
+  "timestampMs": 10340,
+  "confidence": null
+ },
+ {
+  "text": "wallet",
+  "startMs": 10420,
+  "endMs": 10890,
+  "timestampMs": 10655,
+  "confidence": null
+ },
+ {
+  "text": "and",
+  "startMs": 10890,
+  "endMs": 11090,
+  "timestampMs": 10990,
+  "confidence": null
+ },
+ {
+  "text": "all",
+  "startMs": 11090,
+  "endMs": 11420,
+  "timestampMs": 11255,
+  "confidence": null
+ },
+ {
+  "text": "his",
+  "startMs": 11420,
+  "endMs": 11560,
+  "timestampMs": 11490,
+  "confidence": null
+ },
+ {
+  "text": "savings.",
+  "startMs": 11560,
+  "endMs": 12170,
+  "timestampMs": 11865,
+  "confidence": null
+ },
+ {
+  "text": "And",
+  "startMs": 12550,
+  "endMs": 12670,
+  "timestampMs": 12610,
+  "confidence": null
+ },
+ {
+  "text": "his",
+  "startMs": 12670,
+  "endMs": 12830,
+  "timestampMs": 12750,
+  "confidence": null
+ },
+ {
+  "text": "daughter's",
+  "startMs": 12830,
+  "endMs": 13210,
+  "timestampMs": 13020,
+  "confidence": null
+ },
+ {
+  "text": "birthday",
+  "startMs": 13210,
+  "endMs": 13660,
+  "timestampMs": 13435,
+  "confidence": null
+ },
+ {
+  "text": "is",
+  "startMs": 13660,
+  "endMs": 13800,
+  "timestampMs": 13730,
+  "confidence": null
+ },
+ {
+  "text": "coming.",
+  "startMs": 13800,
+  "endMs": 14230,
+  "timestampMs": 14015,
+  "confidence": null
+ },
+ {
+  "text": "So",
+  "startMs": 14600,
+  "endMs": 14880,
+  "timestampMs": 14740,
+  "confidence": null
+ },
+ {
+  "text": "his",
+  "startMs": 14880,
+  "endMs": 15100,
+  "timestampMs": 14990,
+  "confidence": null
+ },
+ {
+  "text": "friend",
+  "startMs": 15100,
+  "endMs": 15340,
+  "timestampMs": 15220,
+  "confidence": null
+ },
+ {
+  "text": "John",
+  "startMs": 15340,
+  "endMs": 15770,
+  "timestampMs": 15555,
+  "confidence": null
+ },
+ {
+  "text": "builds",
+  "startMs": 15770,
+  "endMs": 16060,
+  "timestampMs": 15915,
+  "confidence": null
+ },
+ {
+  "text": "a",
+  "startMs": 16060,
+  "endMs": 16090,
+  "timestampMs": 16075,
+  "confidence": null
+ },
+ {
+  "text": "wooden",
+  "startMs": 16090,
+  "endMs": 16440,
+  "timestampMs": 16265,
+  "confidence": null
+ },
+ {
+  "text": "crate,",
+  "startMs": 16440,
+  "endMs": 16970,
+  "timestampMs": 16705,
+  "confidence": null
+ },
+ {
+  "text": "just",
+  "startMs": 17120,
+  "endMs": 17370,
+  "timestampMs": 17245,
+  "confidence": null
+ },
+ {
+  "text": "big",
+  "startMs": 17370,
+  "endMs": 17570,
+  "timestampMs": 17470,
+  "confidence": null
+ },
+ {
+  "text": "enough",
+  "startMs": 17570,
+  "endMs": 17800,
+  "timestampMs": 17685,
+  "confidence": null
+ },
+ {
+  "text": "for",
+  "startMs": 17800,
+  "endMs": 17910,
+  "timestampMs": 17855,
+  "confidence": null
+ },
+ {
+  "text": "one",
+  "startMs": 17910,
+  "endMs": 18150,
+  "timestampMs": 18030,
+  "confidence": null
+ },
+ {
+  "text": "athlete.",
+  "startMs": 18150,
+  "endMs": 18650,
+  "timestampMs": 18400,
+  "confidence": null
+ },
+ {
+  "text": "Reg",
+  "startMs": 19050,
+  "endMs": 19290,
+  "timestampMs": 19170,
+  "confidence": null
+ },
+ {
+  "text": "climbs",
+  "startMs": 19290,
+  "endMs": 19710,
+  "timestampMs": 19500,
+  "confidence": null
+ },
+ {
+  "text": "in",
+  "startMs": 19710,
+  "endMs": 19830,
+  "timestampMs": 19770,
+  "confidence": null
+ },
+ {
+  "text": "with",
+  "startMs": 19830,
+  "endMs": 20030,
+  "timestampMs": 19930,
+  "confidence": null
+ },
+ {
+  "text": "food,",
+  "startMs": 20030,
+  "endMs": 20480,
+  "timestampMs": 20255,
+  "confidence": null
+ },
+ {
+  "text": "water,",
+  "startMs": 20660,
+  "endMs": 21120,
+  "timestampMs": 20890,
+  "confidence": null
+ },
+ {
+  "text": "a",
+  "startMs": 21310,
+  "endMs": 21380,
+  "timestampMs": 21345,
+  "confidence": null
+ },
+ {
+  "text": "torch\u2026",
+  "startMs": 21380,
+  "endMs": 21900,
+  "timestampMs": 21640,
+  "confidence": null
+ },
+ {
+  "text": "and",
+  "startMs": 22190,
+  "endMs": 22420,
+  "timestampMs": 22305,
+  "confidence": null
+ },
+ {
+  "text": "an",
+  "startMs": 22420,
+  "endMs": 22550,
+  "timestampMs": 22485,
+  "confidence": null
+ },
+ {
+  "text": "empty",
+  "startMs": 22550,
+  "endMs": 22820,
+  "timestampMs": 22685,
+  "confidence": null
+ },
+ {
+  "text": "bottle.",
+  "startMs": 22820,
+  "endMs": 23330,
+  "timestampMs": 23075,
+  "confidence": null
+ },
+ {
+  "text": "The",
+  "startMs": 23710,
+  "endMs": 23780,
+  "timestampMs": 23745,
+  "confidence": null
+ },
+ {
+  "text": "label:",
+  "startMs": 23780,
+  "endMs": 24300,
+  "timestampMs": 24040,
+  "confidence": null
+ },
+ {
+  "text": "cash",
+  "startMs": 24570,
+  "endMs": 25030,
+  "timestampMs": 24800,
+  "confidence": null
+ },
+ {
+  "text": "on",
+  "startMs": 25030,
+  "endMs": 25160,
+  "timestampMs": 25095,
+  "confidence": null
+ },
+ {
+  "text": "delivery.",
+  "startMs": 25160,
+  "endMs": 25800,
+  "timestampMs": 25480,
+  "confidence": null
+ },
+ {
+  "text": "Fog",
+  "startMs": 26160,
+  "endMs": 26470,
+  "timestampMs": 26315,
+  "confidence": null
+ },
+ {
+  "text": "keeps",
+  "startMs": 26470,
+  "endMs": 26760,
+  "timestampMs": 26615,
+  "confidence": null
+ },
+ {
+  "text": "the",
+  "startMs": 26760,
+  "endMs": 26850,
+  "timestampMs": 26805,
+  "confidence": null
+ },
+ {
+  "text": "plane",
+  "startMs": 26850,
+  "endMs": 27160,
+  "timestampMs": 27005,
+  "confidence": null
+ },
+ {
+  "text": "grounded",
+  "startMs": 27160,
+  "endMs": 27650,
+  "timestampMs": 27405,
+  "confidence": null
+ },
+ {
+  "text": "for",
+  "startMs": 27650,
+  "endMs": 27850,
+  "timestampMs": 27750,
+  "confidence": null
+ },
+ {
+  "text": "hours.",
+  "startMs": 27850,
+  "endMs": 28360,
+  "timestampMs": 28105,
+  "confidence": null
+ },
+ {
+  "text": "In",
+  "startMs": 28740,
+  "endMs": 28900,
+  "timestampMs": 28820,
+  "confidence": null
+ },
+ {
+  "text": "Bombay,",
+  "startMs": 28900,
+  "endMs": 29530,
+  "timestampMs": 29215,
+  "confidence": null
+ },
+ {
+  "text": "workers",
+  "startMs": 29670,
+  "endMs": 30110,
+  "timestampMs": 29890,
+  "confidence": null
+ },
+ {
+  "text": "leave",
+  "startMs": 30110,
+  "endMs": 30330,
+  "timestampMs": 30220,
+  "confidence": null
+ },
+ {
+  "text": "the",
+  "startMs": 30330,
+  "endMs": 30420,
+  "timestampMs": 30375,
+  "confidence": null
+ },
+ {
+  "text": "box",
+  "startMs": 30420,
+  "endMs": 30780,
+  "timestampMs": 30600,
+  "confidence": null
+ },
+ {
+  "text": "upside",
+  "startMs": 30780,
+  "endMs": 31120,
+  "timestampMs": 30950,
+  "confidence": null
+ },
+ {
+  "text": "down",
+  "startMs": 31120,
+  "endMs": 31440,
+  "timestampMs": 31280,
+  "confidence": null
+ },
+ {
+  "text": "on",
+  "startMs": 31440,
+  "endMs": 31550,
+  "timestampMs": 31495,
+  "confidence": null
+ },
+ {
+  "text": "a",
+  "startMs": 31550,
+  "endMs": 31600,
+  "timestampMs": 31575,
+  "confidence": null
+ },
+ {
+  "text": "scorching",
+  "startMs": 31600,
+  "endMs": 32160,
+  "timestampMs": 31880,
+  "confidence": null
+ },
+ {
+  "text": "runway\u2026",
+  "startMs": 32160,
+  "endMs": 32710,
+  "timestampMs": 32435,
+  "confidence": null
+ },
+ {
+  "text": "for",
+  "startMs": 33220,
+  "endMs": 33350,
+  "timestampMs": 33285,
+  "confidence": null
+ },
+ {
+  "text": "four",
+  "startMs": 33350,
+  "endMs": 33830,
+  "timestampMs": 33590,
+  "confidence": null
+ },
+ {
+  "text": "hours.",
+  "startMs": 33930,
+  "endMs": 34540,
+  "timestampMs": 34235,
+  "confidence": null
+ },
+ {
+  "text": "Reg",
+  "startMs": 34920,
+  "endMs": 35160,
+  "timestampMs": 35040,
+  "confidence": null
+ },
+ {
+  "text": "strips",
+  "startMs": 35160,
+  "endMs": 35590,
+  "timestampMs": 35375,
+  "confidence": null
+ },
+ {
+  "text": "off",
+  "startMs": 35590,
+  "endMs": 35760,
+  "timestampMs": 35675,
+  "confidence": null
+ },
+ {
+  "text": "his",
+  "startMs": 35760,
+  "endMs": 35930,
+  "timestampMs": 35845,
+  "confidence": null
+ },
+ {
+  "text": "clothes",
+  "startMs": 35930,
+  "endMs": 36470,
+  "timestampMs": 36200,
+  "confidence": null
+ },
+ {
+  "text": "and",
+  "startMs": 36550,
+  "endMs": 36690,
+  "timestampMs": 36620,
+  "confidence": null
+ },
+ {
+  "text": "waits.",
+  "startMs": 36690,
+  "endMs": 37160,
+  "timestampMs": 36925,
+  "confidence": null
+ },
+ {
+  "text": "Back",
+  "startMs": 37540,
+  "endMs": 37790,
+  "timestampMs": 37665,
+  "confidence": null
+ },
+ {
+  "text": "in",
+  "startMs": 37790,
+  "endMs": 37860,
+  "timestampMs": 37825,
+  "confidence": null
+ },
+ {
+  "text": "London,",
+  "startMs": 37860,
+  "endMs": 38340,
+  "timestampMs": 38100,
+  "confidence": null
+ },
+ {
+  "text": "John",
+  "startMs": 38520,
+  "endMs": 38770,
+  "timestampMs": 38645,
+  "confidence": null
+ },
+ {
+  "text": "hears",
+  "startMs": 38770,
+  "endMs": 39070,
+  "timestampMs": 38920,
+  "confidence": null
+ },
+ {
+  "text": "nothing",
+  "startMs": 39070,
+  "endMs": 39580,
+  "timestampMs": 39325,
+  "confidence": null
+ },
+ {
+  "text": "and",
+  "startMs": 39780,
+  "endMs": 39910,
+  "timestampMs": 39845,
+  "confidence": null
+ },
+ {
+  "text": "fears",
+  "startMs": 39910,
+  "endMs": 40270,
+  "timestampMs": 40090,
+  "confidence": null
+ },
+ {
+  "text": "the",
+  "startMs": 40270,
+  "endMs": 40340,
+  "timestampMs": 40305,
+  "confidence": null
+ },
+ {
+  "text": "worst.",
+  "startMs": 40340,
+  "endMs": 40860,
+  "timestampMs": 40600,
+  "confidence": null
+ },
+ {
+  "text": "You",
+  "startMs": 41240,
+  "endMs": 41340,
+  "timestampMs": 41290,
+  "confidence": null
+ },
+ {
+  "text": "see,",
+  "startMs": 41340,
+  "endMs": 41650,
+  "timestampMs": 41495,
+  "confidence": null
+ },
+ {
+  "text": "Reg",
+  "startMs": 41920,
+  "endMs": 42150,
+  "timestampMs": 42035,
+  "confidence": null
+ },
+ {
+  "text": "had",
+  "startMs": 42150,
+  "endMs": 42290,
+  "timestampMs": 42220,
+  "confidence": null
+ },
+ {
+  "text": "worked",
+  "startMs": 42290,
+  "endMs": 42620,
+  "timestampMs": 42455,
+  "confidence": null
+ },
+ {
+  "text": "in",
+  "startMs": 42620,
+  "endMs": 42730,
+  "timestampMs": 42675,
+  "confidence": null
+ },
+ {
+  "text": "airport",
+  "startMs": 42730,
+  "endMs": 43210,
+  "timestampMs": 42970,
+  "confidence": null
+ },
+ {
+  "text": "cargo.",
+  "startMs": 43210,
+  "endMs": 43810,
+  "timestampMs": 43510,
+  "confidence": null
+ },
+ {
+  "text": "Ship",
+  "startMs": 44090,
+  "endMs": 44320,
+  "timestampMs": 44205,
+  "confidence": null
+ },
+ {
+  "text": "something",
+  "startMs": 44320,
+  "endMs": 44670,
+  "timestampMs": 44495,
+  "confidence": null
+ },
+ {
+  "text": "cash",
+  "startMs": 44670,
+  "endMs": 45040,
+  "timestampMs": 44855,
+  "confidence": null
+ },
+ {
+  "text": "on",
+  "startMs": 45040,
+  "endMs": 45130,
+  "timestampMs": 45085,
+  "confidence": null
+ },
+ {
+  "text": "delivery\u2026",
+  "startMs": 45130,
+  "endMs": 45700,
+  "timestampMs": 45415,
+  "confidence": null
+ },
+ {
+  "text": "and",
+  "startMs": 46080,
+  "endMs": 46310,
+  "timestampMs": 46195,
+  "confidence": null
+ },
+ {
+  "text": "the",
+  "startMs": 46310,
+  "endMs": 46380,
+  "timestampMs": 46345,
+  "confidence": null
+ },
+ {
+  "text": "receiver",
+  "startMs": 46380,
+  "endMs": 46860,
+  "timestampMs": 46620,
+  "confidence": null
+ },
+ {
+  "text": "pays.",
+  "startMs": 46860,
+  "endMs": 47340,
+  "timestampMs": 47100,
+  "confidence": null
+ },
+ {
+  "text": "Sixty-three",
+  "startMs": 47760,
+  "endMs": 48430,
+  "timestampMs": 48095,
+  "confidence": null
+ },
+ {
+  "text": "hours",
+  "startMs": 48430,
+  "endMs": 48720,
+  "timestampMs": 48575,
+  "confidence": null
+ },
+ {
+  "text": "later,",
+  "startMs": 48720,
+  "endMs": 49130,
+  "timestampMs": 48925,
+  "confidence": null
+ },
+ {
+  "text": "in",
+  "startMs": 49220,
+  "endMs": 49380,
+  "timestampMs": 49300,
+  "confidence": null
+ },
+ {
+  "text": "Perth,",
+  "startMs": 49380,
+  "endMs": 49820,
+  "timestampMs": 49600,
+  "confidence": null
+ },
+ {
+  "text": "he",
+  "startMs": 49940,
+  "endMs": 50100,
+  "timestampMs": 50020,
+  "confidence": null
+ },
+ {
+  "text": "cuts",
+  "startMs": 50100,
+  "endMs": 50360,
+  "timestampMs": 50230,
+  "confidence": null
+ },
+ {
+  "text": "his",
+  "startMs": 50360,
+  "endMs": 50510,
+  "timestampMs": 50435,
+  "confidence": null
+ },
+ {
+  "text": "way",
+  "startMs": 50510,
+  "endMs": 50730,
+  "timestampMs": 50620,
+  "confidence": null
+ },
+ {
+  "text": "out",
+  "startMs": 50730,
+  "endMs": 50860,
+  "timestampMs": 50795,
+  "confidence": null
+ },
+ {
+  "text": "with",
+  "startMs": 50860,
+  "endMs": 50980,
+  "timestampMs": 50920,
+  "confidence": null
+ },
+ {
+  "text": "a",
+  "startMs": 50980,
+  "endMs": 51030,
+  "timestampMs": 51005,
+  "confidence": null
+ },
+ {
+  "text": "pocketknife",
+  "startMs": 51030,
+  "endMs": 51750,
+  "timestampMs": 51390,
+  "confidence": null
+ },
+ {
+  "text": "and",
+  "startMs": 51750,
+  "endMs": 51920,
+  "timestampMs": 51835,
+  "confidence": null
+ },
+ {
+  "text": "hitchhikes",
+  "startMs": 51920,
+  "endMs": 52430,
+  "timestampMs": 52175,
+  "confidence": null
+ },
+ {
+  "text": "home",
+  "startMs": 52430,
+  "endMs": 52630,
+  "timestampMs": 52530,
+  "confidence": null
+ },
+ {
+  "text": "to",
+  "startMs": 52630,
+  "endMs": 52710,
+  "timestampMs": 52670,
+  "confidence": null
+ },
+ {
+  "text": "Adelaide.",
+  "startMs": 52710,
+  "endMs": 53320,
+  "timestampMs": 53015,
+  "confidence": null
+ },
+ {
+  "text": "He",
+  "startMs": 53830,
+  "endMs": 53910,
+  "timestampMs": 53870,
+  "confidence": null
+ },
+ {
+  "text": "makes",
+  "startMs": 53910,
+  "endMs": 54180,
+  "timestampMs": 54045,
+  "confidence": null
+ },
+ {
+  "text": "the",
+  "startMs": 54180,
+  "endMs": 54260,
+  "timestampMs": 54220,
+  "confidence": null
+ },
+ {
+  "text": "birthday.",
+  "startMs": 54260,
+  "endMs": 54880,
+  "timestampMs": 54570,
+  "confidence": null
+ },
+ {
+  "text": "And",
+  "startMs": 55240,
+  "endMs": 55370,
+  "timestampMs": 55305,
+  "confidence": null
+ },
+ {
+  "text": "the",
+  "startMs": 55370,
+  "endMs": 55430,
+  "timestampMs": 55400,
+  "confidence": null
+ },
+ {
+  "text": "bill",
+  "startMs": 55430,
+  "endMs": 55710,
+  "timestampMs": 55570,
+  "confidence": null
+ },
+ {
+  "text": "for",
+  "startMs": 55710,
+  "endMs": 55840,
+  "timestampMs": 55775,
+  "confidence": null
+ },
+ {
+  "text": "the",
+  "startMs": 55840,
+  "endMs": 55940,
+  "timestampMs": 55890,
+  "confidence": null
+ },
+ {
+  "text": "world's",
+  "startMs": 55940,
+  "endMs": 56370,
+  "timestampMs": 56155,
+  "confidence": null
+ },
+ {
+  "text": "cheapest",
+  "startMs": 56370,
+  "endMs": 56880,
+  "timestampMs": 56625,
+  "confidence": null
+ },
+ {
+  "text": "flight?",
+  "startMs": 56880,
+  "endMs": 57350,
+  "timestampMs": 57115,
+  "confidence": null
+ },
+ {
+  "text": "He",
+  "startMs": 57830,
+  "endMs": 57970,
+  "timestampMs": 57900,
+  "confidence": null
+ },
+ {
+  "text": "never",
+  "startMs": 57970,
+  "endMs": 58260,
+  "timestampMs": 58115,
+  "confidence": null
+ },
+ {
+  "text": "paid",
+  "startMs": 58260,
+  "endMs": 58580,
+  "timestampMs": 58420,
+  "confidence": null
+ },
+ {
+  "text": "it.",
+  "startMs": 58580,
+  "endMs": 58830,
+  "timestampMs": 58705,
+  "confidence": null
+ }
+]

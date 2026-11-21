@@ -40,3 +40,11 @@ Approved style and rule decisions, newest last. These override `MODEL_BRIEF.md` 
   - Give each variant of a swappable part (eyes, mouths) its own React key, so expression changes rebuild it cleanly.
   - Hair is hidden under closed hats (beanie, cap, chef).
   - Face layers keep at least 0.015 depth between stacked discs.
+
+## Voice (pending approval with STATE 5, video 1)
+
+- ElevenLabs voice: **Nick - Relatable & Engaging Friend**.
+- Settings for video 1, read from the export filename: speed 1.10, stability 70, similarity 75, style exaggeration 63, speaker boost on, model "m2" (Multilingual v2).
+- Multilingual v2 ignores [audio tags]. None were spoken aloud, but the delivery tags had no effect. Use a tags-capable model (v3/v4) to make them work.
+- Post rules: inter-sentence gaps are capped at 0.38 s, except dramatic pauses. A rushed closer is slowed with atempo ≥ 0.9. The original take is kept as `vo_original.mp3`.
+- Timestamps: `tools/align_vo.py` (pocketsphinx forced alignment against the approved script). Whisper models can't be downloaded in this environment.
