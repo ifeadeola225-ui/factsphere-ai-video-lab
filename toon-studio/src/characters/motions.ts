@@ -19,7 +19,8 @@ export type MotionName =
   | 'type'
   | 'carry'
   | 'sit'
-  | 'wave';
+  | 'wave'
+  | 'throw';
 
 export type MotionOut = {
   joints: Joints;
@@ -144,6 +145,17 @@ export const motion = (
     case 'point': {
       const s = springAt(frame, fps, startSec, 12, 140);
       out.joints = withIdle(mix(base, {...base, rArm: POSES.pointR.rArm}, s), frame, fps, seed);
+      return out;
+    }
+
+    case 'throw': {
+      // javelin throw: draw back (lean back, arm cocked behind), then whip forward and follow through.
+      // `startSec` is the release moment; the draw-back starts 0.6 s before it.
+      const draw = interpolate(t, [0, 0.45], [0, 1], {...clamp, easing: Easing.inOut(Easing.quad)});
+      const rel = springAt(frame, fps, startSec + 0.55, 10, 180);
+      const back = {...base, rArm: arm(0.9, -1.1, 0.35, -0.2), lArm: arm(0.6, 1.2, 0.2, 0), lean: -0.12, headYaw: 0.15};
+      const fwd = {...base, rArm: arm(0.4, 1.7, 0.05, 0.1), lArm: arm(0.5, -0.4, 0.3, 0), lean: 0.16, headYaw: 0};
+      out.joints = withIdle(mix(mix(base, back, draw), fwd, rel), frame, fps, seed, 0.3);
       return out;
     }
 

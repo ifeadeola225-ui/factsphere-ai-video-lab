@@ -193,6 +193,23 @@ export const OutfitDetails: React.FC<{look: Look}> = ({look}) => {
       );
     case 'tee':
       return <NeckRing color={shade} tube={0.07} r={0.48} />;
+    case 'tracksuit':
+      return (
+        <>
+          {/* zip-up track top: collar, centre zip, gold side stripes */}
+          <NeckRing color={shade} tube={0.1} r={0.5} />
+          <mesh position={[0, TY + 0.1, R + 0.03]} material={toonMat(accent, 'char')}>
+            <boxGeometry args={[0.045, 1.35, 0.02]} />
+          </mesh>
+          <mesh position={[0, TY + 0.72, R + 0.03]} material={toonMat(accent, 'char')}>
+            <boxGeometry args={[0.09, 0.14, 0.04]} />
+            <Ink w={0.01} />
+          </mesh>
+          {[-1, 1].map((s) => (
+            <Patch key={s} y={TY - 0.05} h={1.25} arc={0.22} color={accent} yaw={s * 1.45} lift={0.025} ink={0} />
+          ))}
+        </>
+      );
   }
 };
 

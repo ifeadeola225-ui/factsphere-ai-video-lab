@@ -9,6 +9,8 @@ import {CAST_IDS} from './characters/cast';
 import {MotionReel} from './tests/MotionReel';
 import {SetsSheet} from './tests/SetsSheet';
 import {SETS} from './sets/library';
+import {ContactSheet, Shots} from './videos/mailed-himself-home/Video';
+import {SHOTLIST} from './videos/mailed-himself-home/kit';
 
 const FPS = 30;
 
@@ -23,5 +25,9 @@ export const RemotionRoot: React.FC = () => (
     <Composition id="MotionReel16x9" component={MotionReel} durationInFrames={12 * FPS} fps={FPS} {...SIZES['16x9']} />
     <Composition id="SetsSheet9x16" component={SetsSheet} durationInFrames={SETS.length} fps={FPS} {...SIZES['9x16']} />
     <Composition id="SetsSheet16x9" component={SetsSheet} durationInFrames={SETS.length} fps={FPS} {...SIZES['16x9']} />
+    <Composition id="MHH-Shots9x16" component={Shots} durationInFrames={Math.round(SHOTLIST.duration * FPS)} fps={FPS} {...SIZES['9x16']} />
+    <Composition id="MHH-Shots16x9" component={Shots} durationInFrames={Math.round(SHOTLIST.duration * FPS)} fps={FPS} {...SIZES['16x9']} />
+    <Composition id="MHH-Sheet9x16" component={ContactSheet} defaultProps={{ids: ['s01'], at: 0.5}} durationInFrames={8} fps={FPS} {...SIZES['9x16']} calculateMetadata={({props}) => ({durationInFrames: props.ids.length})} />
+    <Composition id="MHH-Sheet16x9" component={ContactSheet} defaultProps={{ids: ['s01'], at: 0.5}} durationInFrames={8} fps={FPS} {...SIZES['16x9']} calculateMetadata={({props}) => ({durationInFrames: props.ids.length})} />
   </>
 );

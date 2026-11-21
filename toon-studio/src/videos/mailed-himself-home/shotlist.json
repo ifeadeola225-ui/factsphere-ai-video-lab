@@ -74,7 +74,7 @@
    ],
    "camera": {
     "9x16": {
-     "anchor": "close",
+     "anchor": "mid",
      "move": "push-in"
     },
     "16x9": {
@@ -114,12 +114,14 @@
     "9x16": {
      "anchor": "mid",
      "move": "punch-in",
-     "punchAtSec": 0.35
+     "punchAtSec": 0.35,
+     "amount": 0.28
     },
     "16x9": {
      "anchor": "mid",
      "move": "punch-in",
-     "punchAtSec": 0.35
+     "punchAtSec": 0.35,
+     "amount": 0.28
     }
    },
    "focus": "reg",
@@ -288,14 +290,16 @@
    "props": [],
    "camera": {
     "9x16": {
-     "anchor": "close",
+     "anchor": "mid",
      "move": "punch-in",
-     "punchAtSec": 0.2
+     "punchAtSec": 0.2,
+     "amount": 0.35
     },
     "16x9": {
-     "anchor": "close",
+     "anchor": "mid",
      "move": "punch-in",
-     "punchAtSec": 0.2
+     "punchAtSec": 0.2,
+     "amount": 0.35
     }
    },
    "focus": "reg",
@@ -1225,6 +1229,5 @@
     "ding@0.6"
    ]
   }
- ],
- "approved": "STATE 6 approved by user; STATE 7 not started yet"
+ ]
 }

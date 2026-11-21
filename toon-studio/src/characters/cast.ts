@@ -2,7 +2,7 @@
 // reference video, but none of its characters' designs (brief section 0.7).
 
 export type HairStyle = 'none' | 'swoop' | 'spiky' | 'buzz' | 'tufts' | 'bun' | 'long';
-export type Outfit = 'hoodie' | 'suit' | 'labcoat' | 'sweater' | 'knit' | 'robe' | 'dress' | 'tee';
+export type Outfit = 'hoodie' | 'suit' | 'labcoat' | 'sweater' | 'knit' | 'robe' | 'dress' | 'tee' | 'tracksuit';
 export type Hat = 'beanie' | 'bowler' | 'crown' | 'cap' | 'chef' | 'straw';
 
 export type Look = {

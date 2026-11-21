@@ -3,184 +3,1173 @@
  "fps": 30,
  "tail": 0.6,
  "shots": [
-  {"id": "s01", "line": "In 1964 a man flew from London",
-   "set": "airfield", "variant": "day-london",
-   "cast": [{"id": "reg", "pose": "stand", "expression": "smug", "action": "idle", "position": [1.2, 0, 1], "note": "head poking out of the crate's open lid"}],
-   "props": ["airliner", "crate-open", "luggage-cart"],
-   "camera": {"9x16": {"anchor": "low_fg", "move": "push-in"}, "16x9": {"anchor": "wide", "move": "drift-right"}},
-   "focus": "reg", "emphasis": ["1964"], "sfx": ["plane-whoosh@0.8"], "transition": "cut"},
-  {"id": "s02", "line": "to Australia with no ticket.",
-   "set": "airfield", "variant": "day-london",
-   "cast": [{"id": "reg", "pose": "shrug", "expression": "worried", "action": "idle", "position": [0, 0, 0], "note": "turns out empty pockets"}],
-   "props": ["airliner"],
-   "camera": {"9x16": {"anchor": "close", "move": "push-in"}, "16x9": {"anchor": "mid", "move": "push-in"}},
-   "focus": "reg", "emphasis": [], "sfx": []},
-  {"id": "s03", "line": "He mailed himself.",
-   "set": "airfield", "variant": "day-london",
-   "cast": [{"id": "reg", "pose": "stand", "expression": "smug", "action": "idle", "position": [0, 0, 0], "note": "inside crate, lid lifts at 0.3 s, he peeks out"}],
-   "props": ["crate-cod"],
-   "camera": {"9x16": {"anchor": "mid", "move": "punch-in", "punchAtSec": 0.35}, "16x9": {"anchor": "mid", "move": "punch-in", "punchAtSec": 0.35}},
-   "focus": "reg", "emphasis": ["mailed"], "sfx": ["stamp-thunk@0.3"]},
-  {"id": "s04", "line": "Reg Spiers, a javelin thrower,",
-   "set": "street", "variant": "london-park",
-   "cast": [{"id": "reg", "pose": "pointR", "expression": "angry", "action": "throw", "position": [0, 0, 0], "holding": "javelin", "note": "wind-up and throw; javelin flies off-frame"}],
-   "props": ["javelin"],
-   "camera": {"9x16": {"anchor": "mid", "move": "drift-left"}, "16x9": {"anchor": "mid", "move": "drift-left"}},
-   "focus": "reg", "emphasis": [], "sfx": ["whoosh@1.2"]},
-  {"id": "s05", "line": "is stuck in London.",
-   "set": "street", "variant": "london-grey",
-   "cast": [{"id": "reg", "pose": "stand", "expression": "sad", "action": "sit", "position": [-6.8, 0, -1.8], "note": "sits alone on the bench, drizzle"}],
-   "props": ["bench", "rain"],
-   "camera": {"9x16": {"anchor": "wide", "move": "push-in"}, "16x9": {"anchor": "wide", "move": "drift-right"}},
-   "focus": "reg", "emphasis": [], "sfx": []},
-  {"id": "s06", "line": "Thieves took his wallet",
-   "set": "street", "variant": "london-grey",
-   "cast": [{"id": "reg", "pose": "stand", "expression": "neutral", "action": "idle", "position": [0.8, 0, 0]},
-            {"id": "thief", "pose": "stand", "expression": "smug", "action": "walk", "position": [-1.5, 0, 0.8], "holding": "wallet", "note": "snatches wallet from Reg's back pocket and runs left"}],
-   "props": ["wallet"],
-   "camera": {"9x16": {"anchor": "mid", "move": "drift-left"}, "16x9": {"anchor": "mid", "move": "drift-left"}},
-   "focus": "thief", "emphasis": ["wallet"], "sfx": ["swipe@0.6"]},
-  {"id": "s07", "line": "and all his savings.",
-   "set": "street", "variant": "london-grey",
-   "cast": [{"id": "reg", "pose": "stand", "expression": "shocked", "action": "gasp", "position": [0, 0, 0], "note": "pats pockets, gasps"}],
+  {
+   "id": "s01",
+   "line": "In 1964 a man flew from London",
+   "set": "airfield",
+   "variant": "day-london",
+   "cast": [
+    {
+     "id": "reg",
+     "pose": "stand",
+     "expression": "smug",
+     "action": "idle",
+     "position": [
+      1.2,
+      0,
+      1
+     ],
+     "note": "head poking out of the crate's open lid"
+    }
+   ],
+   "props": [
+    "airliner",
+    "crate-open",
+    "luggage-cart"
+   ],
+   "camera": {
+    "9x16": {
+     "anchor": "low_fg",
+     "move": "push-in"
+    },
+    "16x9": {
+     "anchor": "wide",
+     "move": "drift-right"
+    }
+   },
+   "focus": "reg",
+   "emphasis": [
+    "1964"
+   ],
+   "sfx": [
+    "plane-whoosh@0.8"
+   ],
+   "transition": "cut"
+  },
+  {
+   "id": "s02",
+   "line": "to Australia with no ticket.",
+   "set": "airfield",
+   "variant": "day-london",
+   "cast": [
+    {
+     "id": "reg",
+     "pose": "shrug",
+     "expression": "worried",
+     "action": "idle",
+     "position": [
+      0,
+      0,
+      0
+     ],
+     "note": "turns out empty pockets"
+    }
+   ],
+   "props": [
+    "airliner"
+   ],
+   "camera": {
+    "9x16": {
+     "anchor": "mid",
+     "move": "push-in"
+    },
+    "16x9": {
+     "anchor": "mid",
+     "move": "push-in"
+    }
+   },
+   "focus": "reg",
+   "emphasis": [],
+   "sfx": []
+  },
+  {
+   "id": "s03",
+   "line": "He mailed himself.",
+   "set": "airfield",
+   "variant": "day-london",
+   "cast": [
+    {
+     "id": "reg",
+     "pose": "stand",
+     "expression": "smug",
+     "action": "idle",
+     "position": [
+      0,
+      0,
+      0
+     ],
+     "note": "inside crate, lid lifts at 0.3 s, he peeks out"
+    }
+   ],
+   "props": [
+    "crate-cod"
+   ],
+   "camera": {
+    "9x16": {
+     "anchor": "mid",
+     "move": "punch-in",
+     "punchAtSec": 0.35,
+     "amount": 0.28
+    },
+    "16x9": {
+     "anchor": "mid",
+     "move": "punch-in",
+     "punchAtSec": 0.35,
+     "amount": 0.28
+    }
+   },
+   "focus": "reg",
+   "emphasis": [
+    "mailed"
+   ],
+   "sfx": [
+    "stamp-thunk@0.3"
+   ]
+  },
+  {
+   "id": "s04",
+   "line": "Reg Spiers, a javelin thrower,",
+   "set": "street",
+   "variant": "london-park",
+   "cast": [
+    {
+     "id": "reg",
+     "pose": "pointR",
+     "expression": "angry",
+     "action": "throw",
+     "position": [
+      0,
+      0,
+      0
+     ],
+     "holding": "javelin",
+     "note": "wind-up and throw; javelin flies off-frame"
+    }
+   ],
+   "props": [
+    "javelin"
+   ],
+   "camera": {
+    "9x16": {
+     "anchor": "mid",
+     "move": "drift-left"
+    },
+    "16x9": {
+     "anchor": "mid",
+     "move": "drift-left"
+    }
+   },
+   "focus": "reg",
+   "emphasis": [],
+   "sfx": [
+    "whoosh@1.2"
+   ]
+  },
+  {
+   "id": "s05",
+   "line": "is stuck in London.",
+   "set": "street",
+   "variant": "london-grey",
+   "cast": [
+    {
+     "id": "reg",
+     "pose": "stand",
+     "expression": "sad",
+     "action": "sit",
+     "position": [
+      -6.8,
+      0,
+      -1.8
+     ],
+     "note": "sits alone on the bench, drizzle"
+    }
+   ],
+   "props": [
+    "bench",
+    "rain"
+   ],
+   "camera": {
+    "9x16": {
+     "anchor": "wide",
+     "move": "push-in"
+    },
+    "16x9": {
+     "anchor": "wide",
+     "move": "drift-right"
+    }
+   },
+   "focus": "reg",
+   "emphasis": [],
+   "sfx": []
+  },
+  {
+   "id": "s06",
+   "line": "Thieves took his wallet",
+   "set": "street",
+   "variant": "london-grey",
+   "cast": [
+    {
+     "id": "reg",
+     "pose": "stand",
+     "expression": "neutral",
+     "action": "idle",
+     "position": [
+      0.8,
+      0,
+      0
+     ]
+    },
+    {
+     "id": "thief",
+     "pose": "stand",
+     "expression": "smug",
+     "action": "walk",
+     "position": [
+      -1.5,
+      0,
+      0.8
+     ],
+     "holding": "wallet",
+     "note": "snatches wallet from Reg's back pocket and runs left"
+    }
+   ],
+   "props": [
+    "wallet"
+   ],
+   "camera": {
+    "9x16": {
+     "anchor": "mid",
+     "move": "drift-left"
+    },
+    "16x9": {
+     "anchor": "mid",
+     "move": "drift-left"
+    }
+   },
+   "focus": "thief",
+   "emphasis": [
+    "wallet"
+   ],
+   "sfx": [
+    "swipe@0.6"
+   ]
+  },
+  {
+   "id": "s07",
+   "line": "and all his savings.",
+   "set": "street",
+   "variant": "london-grey",
+   "cast": [
+    {
+     "id": "reg",
+     "pose": "stand",
+     "expression": "shocked",
+     "action": "gasp",
+     "position": [
+      0,
+      0,
+      0
+     ],
+     "note": "pats pockets, gasps"
+    }
+   ],
    "props": [],
-   "camera": {"9x16": {"anchor": "close", "move": "punch-in", "punchAtSec": 0.2}, "16x9": {"anchor": "close", "move": "punch-in", "punchAtSec": 0.2}},
-   "focus": "reg", "emphasis": [], "sfx": ["gasp-sting@0.2"]},
-  {"id": "s08", "line": "And his daughter's birthday is coming.",
+   "camera": {
+    "9x16": {
+     "anchor": "mid",
+     "move": "punch-in",
+     "punchAtSec": 0.2,
+     "amount": 0.35
+    },
+    "16x9": {
+     "anchor": "mid",
+     "move": "punch-in",
+     "punchAtSec": 0.2,
+     "amount": 0.35
+    }
+   },
+   "focus": "reg",
+   "emphasis": [],
+   "sfx": [
+    "gasp-sting@0.2"
+   ]
+  },
+  {
+   "id": "s08",
+   "line": "And his daughter's birthday is coming.",
    "set": "small-room",
-   "cast": [{"id": "reg", "pose": "stand", "expression": "sad", "action": "idle", "position": [-1.2, 0, 0], "holding": "photo", "note": "looks at a photo of his daughter; wall calendar with a circled date"}],
-   "props": ["photo", "calendar-circled"],
-   "camera": {"9x16": {"anchor": "mid", "move": "push-in"}, "16x9": {"anchor": "mid", "move": "drift-right"}},
-   "focus": "reg", "emphasis": ["birthday"], "sfx": []},
-  {"id": "s09", "line": "So his friend John builds a wooden crate,",
-   "set": "warehouse", "variant": "london",
-   "cast": [{"id": "john", "pose": "stand", "expression": "thinking", "action": "tap", "position": [-1.4, 0, 0.4], "holding": "hammer"},
-            {"id": "reg", "pose": "hipsBoth", "expression": "smile", "action": "idle", "position": [2.4, 0, -0.6]}],
-   "props": ["crate-open", "hammer", "planks"],
-   "camera": {"9x16": {"anchor": "mid", "move": "push-in"}, "16x9": {"anchor": "mid", "move": "drift-right"}},
-   "focus": "john", "emphasis": ["crate"], "sfx": ["hammer-tap@0.4", "hammer-tap@0.8", "hammer-tap@1.2"]},
-  {"id": "s10", "line": "just big enough for one athlete.",
-   "set": "warehouse", "variant": "london",
-   "cast": [{"id": "reg", "pose": "stand", "expression": "worried", "action": "sit", "position": [0, 0, 0], "note": "squeezed inside the open crate, knees to chin"},
-            {"id": "john", "pose": "stand", "expression": "smile", "action": "nod", "position": [-2.6, 0, 0.6]}],
-   "props": ["crate-open"],
-   "camera": {"9x16": {"anchor": "high", "move": "push-in"}, "16x9": {"anchor": "high", "move": "push-in"}},
-   "focus": "reg", "emphasis": [], "sfx": ["squeak@0.5"]},
-  {"id": "s11", "line": "Reg climbs in with food, water,",
-   "set": "warehouse", "variant": "london",
-   "cast": [{"id": "reg", "pose": "stand", "expression": "smile", "action": "sit", "position": [0, 0, 0], "note": "inside crate; tins and a water bottle pop in on the beat of each word"}],
-   "props": ["crate-open", "tins", "water-bottle"],
-   "camera": {"9x16": {"anchor": "high", "move": "orbit"}, "16x9": {"anchor": "high", "move": "orbit"}},
-   "focus": "reg", "emphasis": [], "sfx": ["pop@food", "pop@water"]},
-  {"id": "s12", "line": "a torch… and an empty bottle.",
-   "set": "warehouse", "variant": "london",
-   "cast": [{"id": "reg", "pose": "stand", "expression": "smug", "action": "sit", "position": [0, 0, 0], "note": "torch clicks on (glow); empty bottle pops in; Reg gives an awkward look to camera"}],
-   "props": ["crate-open", "torch-glow", "empty-bottle"],
-   "camera": {"9x16": {"anchor": "close", "move": "push-in"}, "16x9": {"anchor": "close", "move": "push-in"}},
-   "focus": "reg", "emphasis": [], "sfx": ["click@0.2", "pop@bottle"]},
-  {"id": "s13", "line": "The label: cash on delivery.",
-   "set": "warehouse", "variant": "london",
+   "cast": [
+    {
+     "id": "reg",
+     "pose": "stand",
+     "expression": "sad",
+     "action": "idle",
+     "position": [
+      -1.2,
+      0,
+      0
+     ],
+     "holding": "photo",
+     "note": "looks at a photo of his daughter; wall calendar with a circled date"
+    }
+   ],
+   "props": [
+    "photo",
+    "calendar-circled"
+   ],
+   "camera": {
+    "9x16": {
+     "anchor": "mid",
+     "move": "push-in"
+    },
+    "16x9": {
+     "anchor": "mid",
+     "move": "drift-right"
+    }
+   },
+   "focus": "reg",
+   "emphasis": [
+    "birthday"
+   ],
+   "sfx": []
+  },
+  {
+   "id": "s09",
+   "line": "So his friend John builds a wooden crate,",
+   "set": "warehouse",
+   "variant": "london",
+   "cast": [
+    {
+     "id": "john",
+     "pose": "stand",
+     "expression": "thinking",
+     "action": "tap",
+     "position": [
+      -1.4,
+      0,
+      0.4
+     ],
+     "holding": "hammer"
+    },
+    {
+     "id": "reg",
+     "pose": "hipsBoth",
+     "expression": "smile",
+     "action": "idle",
+     "position": [
+      2.4,
+      0,
+      -0.6
+     ]
+    }
+   ],
+   "props": [
+    "crate-open",
+    "hammer",
+    "planks"
+   ],
+   "camera": {
+    "9x16": {
+     "anchor": "mid",
+     "move": "push-in"
+    },
+    "16x9": {
+     "anchor": "mid",
+     "move": "drift-right"
+    }
+   },
+   "focus": "john",
+   "emphasis": [
+    "crate"
+   ],
+   "sfx": [
+    "hammer-tap@0.4",
+    "hammer-tap@0.8",
+    "hammer-tap@1.2"
+   ]
+  },
+  {
+   "id": "s10",
+   "line": "just big enough for one athlete.",
+   "set": "warehouse",
+   "variant": "london",
+   "cast": [
+    {
+     "id": "reg",
+     "pose": "stand",
+     "expression": "worried",
+     "action": "sit",
+     "position": [
+      0,
+      0,
+      0
+     ],
+     "note": "squeezed inside the open crate, knees to chin"
+    },
+    {
+     "id": "john",
+     "pose": "stand",
+     "expression": "smile",
+     "action": "nod",
+     "position": [
+      -2.6,
+      0,
+      0.6
+     ]
+    }
+   ],
+   "props": [
+    "crate-open"
+   ],
+   "camera": {
+    "9x16": {
+     "anchor": "high",
+     "move": "push-in"
+    },
+    "16x9": {
+     "anchor": "high",
+     "move": "push-in"
+    }
+   },
+   "focus": "reg",
+   "emphasis": [],
+   "sfx": [
+    "squeak@0.5"
+   ]
+  },
+  {
+   "id": "s11",
+   "line": "Reg climbs in with food, water,",
+   "set": "warehouse",
+   "variant": "london",
+   "cast": [
+    {
+     "id": "reg",
+     "pose": "stand",
+     "expression": "smile",
+     "action": "sit",
+     "position": [
+      0,
+      0,
+      0
+     ],
+     "note": "inside crate; tins and a water bottle pop in on the beat of each word"
+    }
+   ],
+   "props": [
+    "crate-open",
+    "tins",
+    "water-bottle"
+   ],
+   "camera": {
+    "9x16": {
+     "anchor": "high",
+     "move": "orbit"
+    },
+    "16x9": {
+     "anchor": "high",
+     "move": "orbit"
+    }
+   },
+   "focus": "reg",
+   "emphasis": [],
+   "sfx": [
+    "pop@food",
+    "pop@water"
+   ]
+  },
+  {
+   "id": "s12",
+   "line": "a torch\u2026 and an empty bottle.",
+   "set": "warehouse",
+   "variant": "london",
+   "cast": [
+    {
+     "id": "reg",
+     "pose": "stand",
+     "expression": "smug",
+     "action": "sit",
+     "position": [
+      0,
+      0,
+      0
+     ],
+     "note": "torch clicks on (glow); empty bottle pops in; Reg gives an awkward look to camera"
+    }
+   ],
+   "props": [
+    "crate-open",
+    "torch-glow",
+    "empty-bottle"
+   ],
+   "camera": {
+    "9x16": {
+     "anchor": "close",
+     "move": "push-in"
+    },
+    "16x9": {
+     "anchor": "close",
+     "move": "push-in"
+    }
+   },
+   "focus": "reg",
+   "emphasis": [],
+   "sfx": [
+    "click@0.2",
+    "pop@bottle"
+   ]
+  },
+  {
+   "id": "s13",
+   "line": "The label: cash on delivery.",
+   "set": "warehouse",
+   "variant": "london",
    "cast": [],
-   "props": ["crate-cod", "rubber-stamp"],
-   "camera": {"9x16": {"anchor": "insert_label", "move": "punch-in", "punchAtSec": 0.9}, "16x9": {"anchor": "insert_label", "move": "punch-in", "punchAtSec": 0.9}},
-   "focus": "label", "emphasis": ["cash", "on", "delivery."], "sfx": ["stamp-thunk@0.9"], "note": "insert: rubber stamp slams CASH ON DELIVERY onto the crate"},
-  {"id": "s14", "line": "Fog keeps the plane grounded for hours.",
-   "set": "airfield", "variant": "fog",
+   "props": [
+    "crate-cod",
+    "rubber-stamp"
+   ],
+   "camera": {
+    "9x16": {
+     "anchor": "insert_label",
+     "move": "punch-in",
+     "punchAtSec": 0.9
+    },
+    "16x9": {
+     "anchor": "insert_label",
+     "move": "punch-in",
+     "punchAtSec": 0.9
+    }
+   },
+   "focus": "label",
+   "emphasis": [
+    "cash",
+    "on",
+    "delivery."
+   ],
+   "sfx": [
+    "stamp-thunk@0.9"
+   ],
+   "note": "insert: rubber stamp slams CASH ON DELIVERY onto the crate"
+  },
+  {
+   "id": "s14",
+   "line": "Fog keeps the plane grounded for hours.",
+   "set": "airfield",
+   "variant": "fog",
    "cast": [],
-   "props": ["airliner", "crate-cod", "luggage-cart", "fog"],
-   "camera": {"9x16": {"anchor": "wide", "move": "drift-right"}, "16x9": {"anchor": "wide", "move": "drift-right"}},
-   "focus": "crate", "emphasis": [], "sfx": ["foghorn-soft@0.5"]},
-  {"id": "s15", "line": "In Bombay, workers leave the box",
-   "set": "airfield", "variant": "hot-bombay",
-   "cast": [{"id": "worker1", "pose": "stand", "expression": "neutral", "action": "carry", "position": [-1.2, 0, 0.5], "note": "two workers carry the crate in and set it down"},
-            {"id": "worker2", "pose": "stand", "expression": "neutral", "action": "carry", "position": [1.2, 0, 0.5]}],
-   "props": ["crate-cod", "sign-bombay", "palm-trees"],
-   "camera": {"9x16": {"anchor": "mid", "move": "drift-left"}, "16x9": {"anchor": "mid", "move": "drift-left"}},
-   "focus": "crate", "emphasis": [], "sfx": []},
-  {"id": "s16", "line": "upside down on a scorching runway…",
-   "set": "airfield", "variant": "hot-bombay",
-   "cast": [{"id": "worker1", "pose": "stand", "expression": "neutral", "action": "walk", "position": [-2, 0, 1], "note": "flip the crate upside down and stroll away"}],
-   "props": ["crate-cod-upside-down", "heat-shimmer"],
-   "camera": {"9x16": {"anchor": "low_fg", "move": "push-in"}, "16x9": {"anchor": "low_fg", "move": "push-in"}},
-   "focus": "crate", "emphasis": [], "sfx": ["thud@0.4"]},
-  {"id": "s17", "line": "for four hours.",
-   "set": "airfield", "variant": "hot-bombay",
+   "props": [
+    "airliner",
+    "crate-cod",
+    "luggage-cart",
+    "fog"
+   ],
+   "camera": {
+    "9x16": {
+     "anchor": "wide",
+     "move": "drift-right"
+    },
+    "16x9": {
+     "anchor": "wide",
+     "move": "drift-right"
+    }
+   },
+   "focus": "crate",
+   "emphasis": [],
+   "sfx": [
+    "foghorn-soft@0.5"
+   ]
+  },
+  {
+   "id": "s15",
+   "line": "In Bombay, workers leave the box",
+   "set": "airfield",
+   "variant": "hot-bombay",
+   "cast": [
+    {
+     "id": "worker1",
+     "pose": "stand",
+     "expression": "neutral",
+     "action": "carry",
+     "position": [
+      -1.2,
+      0,
+      0.5
+     ],
+     "note": "two workers carry the crate in and set it down"
+    },
+    {
+     "id": "worker2",
+     "pose": "stand",
+     "expression": "neutral",
+     "action": "carry",
+     "position": [
+      1.2,
+      0,
+      0.5
+     ]
+    }
+   ],
+   "props": [
+    "crate-cod",
+    "sign-bombay",
+    "palm-trees"
+   ],
+   "camera": {
+    "9x16": {
+     "anchor": "mid",
+     "move": "drift-left"
+    },
+    "16x9": {
+     "anchor": "mid",
+     "move": "drift-left"
+    }
+   },
+   "focus": "crate",
+   "emphasis": [],
+   "sfx": []
+  },
+  {
+   "id": "s16",
+   "line": "upside down on a scorching runway\u2026",
+   "set": "airfield",
+   "variant": "hot-bombay",
+   "cast": [
+    {
+     "id": "worker1",
+     "pose": "stand",
+     "expression": "neutral",
+     "action": "walk",
+     "position": [
+      -2,
+      0,
+      1
+     ],
+     "note": "flip the crate upside down and stroll away"
+    }
+   ],
+   "props": [
+    "crate-cod-upside-down",
+    "heat-shimmer"
+   ],
+   "camera": {
+    "9x16": {
+     "anchor": "low_fg",
+     "move": "push-in"
+    },
+    "16x9": {
+     "anchor": "low_fg",
+     "move": "push-in"
+    }
+   },
+   "focus": "crate",
+   "emphasis": [],
+   "sfx": [
+    "thud@0.4"
+   ]
+  },
+  {
+   "id": "s17",
+   "line": "for four hours.",
+   "set": "airfield",
+   "variant": "hot-bombay",
    "cast": [],
-   "props": ["crate-cod-upside-down", "sun-timelapse"],
-   "camera": {"9x16": {"anchor": "wide", "move": "crane-up"}, "16x9": {"anchor": "wide", "move": "crane-up"}},
-   "focus": "crate", "emphasis": ["four", "hours."], "sfx": ["clock-tick@0.0"], "note": "time-lapse: sun arcs, shadows sweep around the crate"},
-  {"id": "s18", "line": "Reg strips off his clothes and waits.",
+   "props": [
+    "crate-cod-upside-down",
+    "sun-timelapse"
+   ],
+   "camera": {
+    "9x16": {
+     "anchor": "wide",
+     "move": "crane-up"
+    },
+    "16x9": {
+     "anchor": "wide",
+     "move": "crane-up"
+    }
+   },
+   "focus": "crate",
+   "emphasis": [
+    "four",
+    "hours."
+   ],
+   "sfx": [
+    "clock-tick@0.0"
+   ],
+   "note": "time-lapse: sun arcs, shadows sweep around the crate"
+  },
+  {
+   "id": "s18",
+   "line": "Reg strips off his clothes and waits.",
    "set": "crate-interior",
-   "cast": [{"id": "reg-tee", "pose": "stand", "expression": "worried", "action": "idle", "position": [0, 0, 0], "note": "upside down inside the crate, tracksuit top tossed aside, sweat drops, torch light"}],
-   "props": ["torch-glow", "sweat-drops"],
-   "camera": {"9x16": {"anchor": "close", "move": "push-in"}, "16x9": {"anchor": "close", "move": "push-in"}},
-   "focus": "reg", "emphasis": [], "sfx": []},
-  {"id": "s19", "line": "Back in London, John hears nothing",
-   "set": "small-room", "variant": "night",
-   "cast": [{"id": "john", "pose": "stand", "expression": "worried", "action": "idle", "position": [0.6, 0, 0], "note": "staring at a silent phone on the desk; clock ticks"}],
-   "props": ["phone", "wall-clock"],
-   "camera": {"9x16": {"anchor": "mid", "move": "push-in"}, "16x9": {"anchor": "mid", "move": "push-in"}},
-   "focus": "john", "emphasis": [], "sfx": ["clock-tick@0.0"]},
-  {"id": "s20", "line": "and fears the worst.",
-   "set": "small-room", "variant": "night",
-   "cast": [{"id": "john", "pose": "stand", "expression": "worried", "action": "shake", "position": [0.6, 0, 0]}],
-   "props": ["phone"],
-   "camera": {"9x16": {"anchor": "close", "move": "punch-in", "punchAtSec": 0.3}, "16x9": {"anchor": "close", "move": "punch-in", "punchAtSec": 0.3}},
-   "focus": "john", "emphasis": [], "sfx": []},
-  {"id": "s21", "line": "You see, Reg had worked in airport cargo.",
-   "set": "warehouse", "variant": "london-flashback",
-   "cast": [{"id": "reg-cargo", "pose": "stand", "expression": "smile", "action": "carry", "position": [-2, 0, 0], "holding": "parcel", "note": "flashback (warm sepia tint): Reg in a cargo cap carrying parcels"}],
-   "props": ["parcels", "sign-cargo"],
-   "camera": {"9x16": {"anchor": "mid", "move": "drift-right"}, "16x9": {"anchor": "mid", "move": "drift-right"}},
-   "focus": "reg", "emphasis": [], "sfx": ["flashback-shimmer@0.0"]},
-  {"id": "s22", "line": "Ship something cash on delivery…",
-   "set": "warehouse", "variant": "london-flashback",
-   "cast": [{"id": "reg-cargo", "pose": "stand", "expression": "smug", "action": "point", "position": [0, 0, 0], "note": "points at a COD tag on a parcel"}],
-   "props": ["parcel-cod-tag"],
-   "camera": {"9x16": {"anchor": "close", "move": "push-in"}, "16x9": {"anchor": "close", "move": "push-in"}},
-   "focus": "reg", "emphasis": ["cash", "on", "delivery…"], "sfx": []},
-  {"id": "s23", "line": "and the receiver pays.",
+   "cast": [
+    {
+     "id": "reg-tee",
+     "pose": "stand",
+     "expression": "worried",
+     "action": "idle",
+     "position": [
+      0,
+      0,
+      0
+     ],
+     "note": "upside down inside the crate, tracksuit top tossed aside, sweat drops, torch light"
+    }
+   ],
+   "props": [
+    "torch-glow",
+    "sweat-drops"
+   ],
+   "camera": {
+    "9x16": {
+     "anchor": "close",
+     "move": "push-in"
+    },
+    "16x9": {
+     "anchor": "close",
+     "move": "push-in"
+    }
+   },
+   "focus": "reg",
+   "emphasis": [],
+   "sfx": []
+  },
+  {
+   "id": "s19",
+   "line": "Back in London, John hears nothing",
+   "set": "small-room",
+   "variant": "night",
+   "cast": [
+    {
+     "id": "john",
+     "pose": "stand",
+     "expression": "worried",
+     "action": "idle",
+     "position": [
+      0.6,
+      0,
+      0
+     ],
+     "note": "staring at a silent phone on the desk; clock ticks"
+    }
+   ],
+   "props": [
+    "phone",
+    "wall-clock"
+   ],
+   "camera": {
+    "9x16": {
+     "anchor": "mid",
+     "move": "push-in"
+    },
+    "16x9": {
+     "anchor": "mid",
+     "move": "push-in"
+    }
+   },
+   "focus": "john",
+   "emphasis": [],
+   "sfx": [
+    "clock-tick@0.0"
+   ]
+  },
+  {
+   "id": "s20",
+   "line": "and fears the worst.",
+   "set": "small-room",
+   "variant": "night",
+   "cast": [
+    {
+     "id": "john",
+     "pose": "stand",
+     "expression": "worried",
+     "action": "shake",
+     "position": [
+      0.6,
+      0,
+      0
+     ]
+    }
+   ],
+   "props": [
+    "phone"
+   ],
+   "camera": {
+    "9x16": {
+     "anchor": "close",
+     "move": "punch-in",
+     "punchAtSec": 0.3
+    },
+    "16x9": {
+     "anchor": "close",
+     "move": "punch-in",
+     "punchAtSec": 0.3
+    }
+   },
+   "focus": "john",
+   "emphasis": [],
+   "sfx": []
+  },
+  {
+   "id": "s21",
+   "line": "You see, Reg had worked in airport cargo.",
+   "set": "warehouse",
+   "variant": "london-flashback",
+   "cast": [
+    {
+     "id": "reg-cargo",
+     "pose": "stand",
+     "expression": "smile",
+     "action": "carry",
+     "position": [
+      -2,
+      0,
+      0
+     ],
+     "holding": "parcel",
+     "note": "flashback (warm sepia tint): Reg in a cargo cap carrying parcels"
+    }
+   ],
+   "props": [
+    "parcels",
+    "sign-cargo"
+   ],
+   "camera": {
+    "9x16": {
+     "anchor": "mid",
+     "move": "drift-right"
+    },
+    "16x9": {
+     "anchor": "mid",
+     "move": "drift-right"
+    }
+   },
+   "focus": "reg",
+   "emphasis": [],
+   "sfx": [
+    "flashback-shimmer@0.0"
+   ]
+  },
+  {
+   "id": "s22",
+   "line": "Ship something cash on delivery\u2026",
+   "set": "warehouse",
+   "variant": "london-flashback",
+   "cast": [
+    {
+     "id": "reg-cargo",
+     "pose": "stand",
+     "expression": "smug",
+     "action": "point",
+     "position": [
+      0,
+      0,
+      0
+     ],
+     "note": "points at a COD tag on a parcel"
+    }
+   ],
+   "props": [
+    "parcel-cod-tag"
+   ],
+   "camera": {
+    "9x16": {
+     "anchor": "close",
+     "move": "push-in"
+    },
+    "16x9": {
+     "anchor": "close",
+     "move": "push-in"
+    }
+   },
+   "focus": "reg",
+   "emphasis": [
+    "cash",
+    "on",
+    "delivery\u2026"
+   ],
+   "sfx": []
+  },
+  {
+   "id": "s23",
+   "line": "and the receiver pays.",
    "set": "office",
-   "cast": [{"id": "bramble", "pose": "stand", "expression": "shocked", "action": "gasp", "position": [0, 0, 0], "holding": "invoice", "note": "Mr. Bramble as the receiving clerk, gasping at an invoice"}],
-   "props": ["invoice"],
-   "camera": {"9x16": {"anchor": "mid", "move": "punch-in", "punchAtSec": 0.4}, "16x9": {"anchor": "mid", "move": "punch-in", "punchAtSec": 0.4}},
-   "focus": "bramble", "emphasis": ["pays."], "sfx": ["cash-register@0.4"]},
-  {"id": "s24", "line": "Sixty-three hours later, in Perth,",
-   "set": "warehouse", "variant": "perth-night",
+   "cast": [
+    {
+     "id": "bramble",
+     "pose": "stand",
+     "expression": "shocked",
+     "action": "gasp",
+     "position": [
+      0,
+      0,
+      0
+     ],
+     "holding": "invoice",
+     "note": "Mr. Bramble as the receiving clerk, gasping at an invoice"
+    }
+   ],
+   "props": [
+    "invoice"
+   ],
+   "camera": {
+    "9x16": {
+     "anchor": "mid",
+     "move": "punch-in",
+     "punchAtSec": 0.4
+    },
+    "16x9": {
+     "anchor": "mid",
+     "move": "punch-in",
+     "punchAtSec": 0.4
+    }
+   },
+   "focus": "bramble",
+   "emphasis": [
+    "pays."
+   ],
+   "sfx": [
+    "cash-register@0.4"
+   ]
+  },
+  {
+   "id": "s24",
+   "line": "Sixty-three hours later, in Perth,",
+   "set": "warehouse",
+   "variant": "perth-night",
    "cast": [],
-   "props": ["crate-cod", "sign-perth", "moonlight"],
-   "camera": {"9x16": {"anchor": "wide", "move": "push-in"}, "16x9": {"anchor": "wide", "move": "push-in"}},
-   "focus": "crate", "emphasis": ["Sixty-three"], "sfx": ["crickets@0.0"]},
-  {"id": "s25", "line": "he cuts his way out with a pocketknife",
-   "set": "warehouse", "variant": "perth-night",
-   "cast": [{"id": "reg-tee", "pose": "stand", "expression": "happy", "action": "jump", "position": [0, 0, 0.8], "note": "knife blade pokes through, panel falls, Reg steps out and stretches"}],
-   "props": ["crate-cod-open-side", "pocketknife"],
-   "camera": {"9x16": {"anchor": "mid", "move": "push-in"}, "16x9": {"anchor": "mid", "move": "push-in"}},
-   "focus": "reg", "emphasis": ["pocketknife"], "sfx": ["wood-crack@0.5", "plank-fall@0.9"]},
-  {"id": "s26", "line": "and hitchhikes home to Adelaide.",
+   "props": [
+    "crate-cod",
+    "sign-perth",
+    "moonlight"
+   ],
+   "camera": {
+    "9x16": {
+     "anchor": "wide",
+     "move": "push-in"
+    },
+    "16x9": {
+     "anchor": "wide",
+     "move": "push-in"
+    }
+   },
+   "focus": "crate",
+   "emphasis": [
+    "Sixty-three"
+   ],
+   "sfx": [
+    "crickets@0.0"
+   ]
+  },
+  {
+   "id": "s25",
+   "line": "he cuts his way out with a pocketknife",
+   "set": "warehouse",
+   "variant": "perth-night",
+   "cast": [
+    {
+     "id": "reg-tee",
+     "pose": "stand",
+     "expression": "happy",
+     "action": "jump",
+     "position": [
+      0,
+      0,
+      0.8
+     ],
+     "note": "knife blade pokes through, panel falls, Reg steps out and stretches"
+    }
+   ],
+   "props": [
+    "crate-cod-open-side",
+    "pocketknife"
+   ],
+   "camera": {
+    "9x16": {
+     "anchor": "mid",
+     "move": "push-in"
+    },
+    "16x9": {
+     "anchor": "mid",
+     "move": "push-in"
+    }
+   },
+   "focus": "reg",
+   "emphasis": [
+    "pocketknife"
+   ],
+   "sfx": [
+    "wood-crack@0.5",
+    "plank-fall@0.9"
+   ]
+  },
+  {
+   "id": "s26",
+   "line": "and hitchhikes home to Adelaide.",
    "set": "outback-road",
-   "cast": [{"id": "reg", "pose": "stand", "expression": "smile", "action": "idle", "position": [0, 0, 0], "note": "thumb out at the roadside; sign: ADELAIDE"}],
-   "props": ["road-sign-adelaide"],
-   "camera": {"9x16": {"anchor": "mid", "move": "drift-right"}, "16x9": {"anchor": "wide", "move": "drift-right"}},
-   "focus": "reg", "emphasis": [], "sfx": ["car-pass@1.0"]},
-  {"id": "s27", "line": "He makes the birthday.",
-   "set": "small-room", "variant": "party",
-   "cast": [{"id": "reg", "pose": "stand", "expression": "happy", "action": "jump", "position": [-1.0, 0, 0]},
-            {"id": "daughter", "pose": "stand", "expression": "happy", "action": "jump", "position": [1.0, 0, 0.6]}],
-   "props": ["cake-candles", "balloons", "bunting"],
-   "camera": {"9x16": {"anchor": "mid", "move": "push-in"}, "16x9": {"anchor": "mid", "move": "drift-left"}},
-   "focus": "daughter", "emphasis": ["birthday."], "sfx": ["party-horn@0.3"]},
-  {"id": "s28", "line": "And the bill for the world's cheapest flight?",
+   "cast": [
+    {
+     "id": "reg",
+     "pose": "stand",
+     "expression": "smile",
+     "action": "idle",
+     "position": [
+      0,
+      0,
+      0
+     ],
+     "note": "thumb out at the roadside; sign: ADELAIDE"
+    }
+   ],
+   "props": [
+    "road-sign-adelaide"
+   ],
+   "camera": {
+    "9x16": {
+     "anchor": "mid",
+     "move": "drift-right"
+    },
+    "16x9": {
+     "anchor": "wide",
+     "move": "drift-right"
+    }
+   },
+   "focus": "reg",
+   "emphasis": [],
+   "sfx": [
+    "car-pass@1.0"
+   ]
+  },
+  {
+   "id": "s27",
+   "line": "He makes the birthday.",
+   "set": "small-room",
+   "variant": "party",
+   "cast": [
+    {
+     "id": "reg",
+     "pose": "stand",
+     "expression": "happy",
+     "action": "jump",
+     "position": [
+      -1.0,
+      0,
+      0
+     ]
+    },
+    {
+     "id": "daughter",
+     "pose": "stand",
+     "expression": "happy",
+     "action": "jump",
+     "position": [
+      1.0,
+      0,
+      0.6
+     ]
+    }
+   ],
+   "props": [
+    "cake-candles",
+    "balloons",
+    "bunting"
+   ],
+   "camera": {
+    "9x16": {
+     "anchor": "mid",
+     "move": "push-in"
+    },
+    "16x9": {
+     "anchor": "mid",
+     "move": "drift-left"
+    }
+   },
+   "focus": "daughter",
+   "emphasis": [
+    "birthday."
+   ],
+   "sfx": [
+    "party-horn@0.3"
+   ]
+  },
+  {
+   "id": "s28",
+   "line": "And the bill for the world's cheapest flight?",
    "set": "office",
-   "cast": [{"id": "bramble", "pose": "stand", "expression": "angry", "action": "talk", "position": [0, 0, 0], "holding": "invoice-long", "note": "unrolls an absurdly long bill to the floor; looks at camera"}],
-   "props": ["invoice-long"],
-   "camera": {"9x16": {"anchor": "mid", "move": "pull-out"}, "16x9": {"anchor": "mid", "move": "pull-out"}},
-   "focus": "bramble", "emphasis": [], "sfx": ["paper-unroll@0.3"]},
-  {"id": "s29", "line": "He never paid it.",
-   "set": "small-room", "variant": "party",
-   "cast": [{"id": "reg", "pose": "hipsBoth", "expression": "smug", "action": "idle", "position": [0, 0, 0], "note": "smug look to camera; holds through the tail"}],
-   "props": ["cake-candles", "balloons"],
-   "camera": {"9x16": {"anchor": "close", "move": "push-in"}, "16x9": {"anchor": "close", "move": "push-in"}},
-   "focus": "reg", "emphasis": ["never"], "sfx": ["ding@0.6"]}
+   "cast": [
+    {
+     "id": "bramble",
+     "pose": "stand",
+     "expression": "angry",
+     "action": "talk",
+     "position": [
+      0,
+      0,
+      0
+     ],
+     "holding": "invoice-long",
+     "note": "unrolls an absurdly long bill to the floor; looks at camera"
+    }
+   ],
+   "props": [
+    "invoice-long"
+   ],
+   "camera": {
+    "9x16": {
+     "anchor": "mid",
+     "move": "pull-out"
+    },
+    "16x9": {
+     "anchor": "mid",
+     "move": "pull-out"
+    }
+   },
+   "focus": "bramble",
+   "emphasis": [],
+   "sfx": [
+    "paper-unroll@0.3"
+   ]
+  },
+  {
+   "id": "s29",
+   "line": "He never paid it.",
+   "set": "small-room",
+   "variant": "party",
+   "cast": [
+    {
+     "id": "reg",
+     "pose": "hipsBoth",
+     "expression": "smug",
+     "action": "idle",
+     "position": [
+      0,
+      0,
+      0
+     ],
+     "note": "smug look to camera; holds through the tail"
+    }
+   ],
+   "props": [
+    "cake-candles",
+    "balloons"
+   ],
+   "camera": {
+    "9x16": {
+     "anchor": "close",
+     "move": "push-in"
+    },
+    "16x9": {
+     "anchor": "close",
+     "move": "push-in"
+    }
+   },
+   "focus": "reg",
+   "emphasis": [
+    "never"
+   ],
+   "sfx": [
+    "ding@0.6"
+   ]
+  }
  ]
 }

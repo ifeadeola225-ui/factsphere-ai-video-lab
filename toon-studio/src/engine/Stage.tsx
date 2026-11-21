@@ -5,7 +5,7 @@ import {useVideoConfig} from 'remotion';
 import * as THREE from 'three';
 import type {CameraState} from './camera';
 
-export type LightPreset = 'interior' | 'day' | 'night' | 'lantern';
+export type LightPreset = 'interior' | 'day' | 'night' | 'lantern' | 'overcast' | 'hot' | 'fog' | 'nightInterior';
 
 /** Sets the R3F camera from a frame-driven CameraState before each render. */
 const CameraRig: React.FC<{cam: CameraState}> = ({cam}) => {
@@ -27,6 +27,10 @@ const KEY = {
   day: {color: '#FFF1D6', intensity: 2.8, pos: [8, 14, 6]},
   night: {color: '#B9C8FF', intensity: 0.9, pos: [-6, 12, 4]},
   lantern: {color: '#FFC98A', intensity: 1.2, pos: [4, 8, 5]},
+  overcast: {color: '#E6ECF2', intensity: 1.3, pos: [4, 14, 8]},
+  hot: {color: '#FFD9A0', intensity: 3.4, pos: [10, 16, 4]},
+  fog: {color: '#E8EEF2', intensity: 0.9, pos: [2, 14, 6]},
+  nightInterior: {color: '#FFC98A', intensity: 1.0, pos: [5, 8, 6]},
 } as const;
 
 const HEMI = {
@@ -34,6 +38,10 @@ const HEMI = {
   day: {sky: '#CFE6FF', ground: '#C9AE84', intensity: 1.5},
   night: {sky: '#6A7FBC', ground: '#2E2A48', intensity: 1.0},
   lantern: {sky: '#7A6A5A', ground: '#3A2418', intensity: 0.9},
+  overcast: {sky: '#C9D3DC', ground: '#8C8478', intensity: 1.5},
+  hot: {sky: '#FFE3B0', ground: '#C98A4A', intensity: 1.4},
+  fog: {sky: '#DDE5EA', ground: '#A9AFB2', intensity: 1.7},
+  nightInterior: {sky: '#5A6FA8', ground: '#3A2A28', intensity: 0.85},
 } as const;
 
 /** A3.3 lighting rig, softened per the brief (lighter shadows, stronger fill). */
