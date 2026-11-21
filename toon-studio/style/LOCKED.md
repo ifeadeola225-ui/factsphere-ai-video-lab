@@ -41,7 +41,7 @@ Approved style and rule decisions, newest last. These override `MODEL_BRIEF.md` 
   - Hair is hidden under closed hats (beanie, cap, chef).
   - Face layers keep at least 0.015 depth between stacked discs.
 
-## Voice (pending approval with STATE 5, video 1)
+## Voice (APPROVED in STATE 5, video 1: channel voice LOCKED)
 
 - ElevenLabs voice: **Nick - Relatable & Engaging Friend**.
 - Settings for video 1, read from the export filename: speed 1.10, stability 70, similarity 75, style exaggeration 63, speaker boost on, model "m2" (Multilingual v2).
