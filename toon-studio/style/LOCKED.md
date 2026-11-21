@@ -48,3 +48,12 @@ Approved style and rule decisions, newest last. These override `MODEL_BRIEF.md` 
 - Multilingual v2 ignores [audio tags]. None were spoken aloud, but the delivery tags had no effect. Use a tags-capable model (v3/v4) to make them work.
 - Post rules: inter-sentence gaps are capped at 0.38 s, except dramatic pauses. A rushed closer is slowed with atempo ≥ 0.9. The original take is kept as `vo_original.mp3`.
 - Timestamps: `tools/align_vo.py` (pocketsphinx forced alignment against the approved script). Whisper models can't be downloaded in this environment.
+
+## World scale (LOCKED after the s26 car fix)
+
+- 1 unit ≈ 0.29 m (Reg is 6.3 units, about 1.8 m tall). Build every vehicle, door and prop to real size at this scale.
+  - Car: ~15.5 long, ~5 tall.
+  - Lane: ~8 wide.
+  - 1960s airliner: fuselage ~11 across (the Airliner prop at scale 3).
+  - Doors: ~7 tall.
+- Check every new prop against a character standing next to it before it goes into a contact sheet.

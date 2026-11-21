@@ -43,14 +43,15 @@ export const Airfield: React.FC<{variant: AirVariant; plane?: boolean; cart?: bo
         <Box p={[0, 13, 0]} s={[5, 2.4, 5]} c={'#2A3A55'} ink={0.04} />
         <Box p={[0, 14.4, 0]} s={[5.6, 0.4, 5.6]} c={C.white} ink={0.03} />
       </group>
-      <group position={[24, 0, -34]}>
+      <group position={[-48, 0, -40]}>
         <mesh position={[0, 0, 0]} rotation={[Math.PI / 2, 0, 0]} material={undefined}>
           <cylinderGeometry args={[9, 9, 16, 24, 1, false, -Math.PI / 2, Math.PI]} />
           <meshToonMaterial color={hot ? '#D8B48A' : '#9FB0B8'} gradientMap={GRADIENT_SET} />
         </mesh>
         <Box p={[0, 3.5, 8.1]} s={[10, 7, 0.2]} c={'#4A5568'} ink={0.04} />
       </group>
-      {plane ? <Airliner position={[2, 0, -19]} rotation={[0, -0.35, 0]} /> : null}
+      {/* real scale: Reg ≈ 1.8 m tall = 6.3 units, so a 1960s jet (fuselage ≈ 3.8 m) is scaled ×3 */}
+      {plane ? <Airliner position={[16, 0, -60]} rotation={[0, -0.35, 0]} scale={3} /> : null}
       {hot ? (
         <>
           <PalmTree position={[-12, 0, -10]} s={1.1} />
@@ -212,13 +213,13 @@ export const OutbackRoad: React.FC = () => {
         <meshToonMaterial color={'#C8693A'} gradientMap={GRADIENT_SET} />
       </mesh>
       {/* road runs away from camera, to the right of the character */}
-      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[3.2, 0.03, -40]} receiveShadow>
-        <planeGeometry args={[4.4, 120]} />
+      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[10, 0.03, -40]} receiveShadow>
+        <planeGeometry args={[16, 160]} />
         <meshToonMaterial color={'#4A4A4A'} gradientMap={GRADIENT_SET} />
       </mesh>
       {Array.from({length: 20}).map((_, i) => (
-        <mesh key={i} rotation={[-Math.PI / 2, 0, 0]} position={[3.2, 0.06, 8 - i * 6]}>
-          <planeGeometry args={[0.18, 2.6]} />
+        <mesh key={i} rotation={[-Math.PI / 2, 0, 0]} position={[10, 0.06, 14 - i * 9]}>
+          <planeGeometry args={[0.4, 4.5]} />
           <meshToonMaterial color={C.white} gradientMap={GRADIENT_SET} />
         </mesh>
       ))}
@@ -226,7 +227,7 @@ export const OutbackRoad: React.FC = () => {
       {Array.from({length: 18}).map((_, i) => {
         const x = (r() - 0.5) * 60;
         const z = -6 - r() * 50;
-        if (Math.abs(x - 3.2) < 4) return null;
+        if (Math.abs(x - 10) < 10) return null;
         return (
           <mesh key={i} position={[x, 0.4, z]} material={undefined} castShadow scale={[1.4, 0.7, 1.2]}>
             <sphereGeometry args={[0.8 + r() * 0.6, 12, 8]} />
@@ -240,9 +241,11 @@ export const OutbackRoad: React.FC = () => {
         <meshToonMaterial color={'#B05A35'} gradientMap={GRADIENT_SET} />
       </mesh>
       {/* road sign */}
-      <group position={[5.8, 0, -3]} rotation={[0, -0.35, 0]}>
-        <Cyl p={[0, 1.9, 0]} r1={0.08} h={3.8} c={'#9FB0B8'} ink={0.015} seg={8} />
-        <Sign p={[0, 3.9, 0.08]} text="ADELAIDE 2,700 km" w={3.2} h={0.75} bg={'#1F7A3A'} fg={C.white} />
+      {/* road sign at real size (~2 m board on a ~2.5 m post), on the verge beside Reg */}
+      <group position={[-6.5, 0, -5]} rotation={[0, 0.3, 0]}>
+        <Cyl p={[-2.4, 4.0, 0]} r1={0.15} h={8.0} c={'#9FB0B8'} ink={0.02} seg={8} />
+        <Cyl p={[2.4, 4.0, 0]} r1={0.15} h={8.0} c={'#9FB0B8'} ink={0.02} seg={8} />
+        <Sign p={[0, 7.4, 0.2]} text="ADELAIDE 2,700 km" w={6.4} h={1.6} bg={'#1F7A3A'} fg={C.white} />
       </group>
     </group>
   );
@@ -250,7 +253,7 @@ export const OutbackRoad: React.FC = () => {
 
 export const ROAD_ANCHORS: Anchors = makeAnchors([0, 0, 0], {
   wide: {
-    '9x16': {pos: [-1, 5.5, 20], target: [1, 4.2, -3], fov: 44},
+    '9x16': {pos: [1.5, 5.8, 24], target: [3.2, 4.4, -3], fov: 46},
     '16x9': {pos: [-1, 5.2, 19], target: [1.5, 4, -3], fov: 40},
   },
 });

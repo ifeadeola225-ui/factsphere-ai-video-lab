@@ -1029,7 +1029,7 @@
    ],
    "camera": {
     "9x16": {
-     "anchor": "mid",
+     "anchor": "wide",
      "move": "drift-right"
     },
     "16x9": {

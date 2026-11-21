@@ -129,7 +129,7 @@ export const S13: React.FC<{shot: Shot}> = ({shot}) => {
 
 /** s14 — thick fog: the plane waits, the crate sits on a cart. */
 export const S14: React.FC<{shot: Shot}> = ({shot}) => (
-  <ShotScene shot={shot} anchors={AIRFIELD_ANCHORS} light="fog" background={'#D9E1E6'} fog={{color: '#D9E1E6', near: 12, far: 60}} focus={[0, 3, 0]} bokeh={3}>
+  <ShotScene shot={shot} anchors={AIRFIELD_ANCHORS} light="fog" background={'#D9E1E6'} fog={{color: '#D9E1E6', near: 14, far: 110}} focus={[0, 3, 0]} bokeh={3}>
     <Airfield variant="fog" cart={false} />
     <LuggageCart position={[0, 0, 0]} rotation={[0, 0.2, 0]} />
     <Crate position={[0, 0.86, 0]} rotation={[0, 0.2, 0]} lid={0} />

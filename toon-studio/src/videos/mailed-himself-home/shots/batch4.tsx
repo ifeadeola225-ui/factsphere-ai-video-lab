@@ -59,19 +59,24 @@ export const S25: React.FC<{shot: Shot}> = ({shot}) => {
   );
 };
 
-/** A simple boxy car (no branding) that drives away down the road. */
+/** A boxy 1960s-ish car at REAL scale (Reg ≈ 1.8 m = 6.3 units → ~4.6 m long, ~1.5 m tall). No branding. */
 const Car: React.FC<{z: number}> = ({z}) => (
-  <group position={[2.4, 0, z]} rotation={[0, Math.PI, 0]}>
-    <Box p={[0, 0.85, 0]} s={[1.9, 0.8, 4.0]} c={C.teal} ink={0.03} />
-    <Box p={[0, 1.55, -0.2]} s={[1.6, 0.7, 2.0]} c={C.teal} ink={0.03} />
-    <Box p={[0, 1.55, 0.83]} s={[1.45, 0.55, 0.05]} c={'#2A3A55'} ink={0} />
+  <group position={[6.0, 0, z]} rotation={[0, Math.PI, 0]}>
+    <Box p={[0, 1.9, 0]} s={[6.0, 2.2, 15.5]} c={C.teal} ink={0.06} />
+    <Box p={[0, 4.0, -1.0]} s={[5.4, 2.0, 7.5]} c={C.teal} ink={0.06} />
+    <Box p={[0, 4.0, 2.78]} s={[4.9, 1.6, 0.08]} c={'#2A3A55'} ink={0} />
+    <Box p={[3.04, 4.0, -1.0]} s={[0.08, 1.5, 6.6]} c={'#2A3A55'} ink={0} />
+    <Box p={[-3.04, 4.0, -1.0]} s={[0.08, 1.5, 6.6]} c={'#2A3A55'} ink={0} />
+    {[-1.9, 1.9].map((x) => (
+      <Box key={x} p={[x, 1.9, 7.78]} s={[1.1, 0.6, 0.08]} c={'#FFF1B8'} ink={0} />
+    ))}
     {[
-      [-0.95, -1.3],
-      [0.95, -1.3],
-      [-0.95, 1.3],
-      [0.95, 1.3],
+      [-3.0, -4.9],
+      [3.0, -4.9],
+      [-3.0, 4.9],
+      [3.0, 4.9],
     ].map(([x, zz], i) => (
-      <Cyl key={i} p={[x, 0.4, zz]} r1={0.4} h={0.3} c={'#1C1C1C'} rot={[0, 0, Math.PI / 2]} ink={0.02} seg={14} />
+      <Cyl key={i} p={[x, 1.1, zz]} r1={1.1} h={0.9} c={'#1C1C1C'} rot={[0, 0, Math.PI / 2]} ink={0.04} seg={18} />
     ))}
   </group>
 );
@@ -79,7 +84,7 @@ const Car: React.FC<{z: number}> = ({z}) => (
 /** s26 — the outback: thumb out at the roadside; a car zooms past toward Adelaide. */
 export const S26: React.FC<{shot: Shot}> = ({shot}) => {
   const {t} = useShotTime();
-  const carZ = interpolate(t, [0.6, 1.8], [16, -40], {...clamp, easing: Easing.in(Easing.quad)});
+  const carZ = interpolate(t, [0.5, 1.8], [30, -80], {...clamp, easing: Easing.in(Easing.quad)});
   return (
     <ShotScene shot={shot} anchors={ROAD_ANCHORS} light="day" background="#9CCBEA" fog={{color: '#F3E2C0', near: 40, far: 140}} focus={headOf()} bokeh={3}>
       <OutbackRoad />
