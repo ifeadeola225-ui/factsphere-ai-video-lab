@@ -1,6 +1,6 @@
 # He Mailed Himself Home
 
-Format: YouTube Short (cap 60 s). Slug: `mailed-himself-home`.
+Format: YouTube Short (cap 60 s). Slug: `mailed-himself-home`. **Script APPROVED (STATE 4).**
 Alternative titles: "The World's Cheapest Flight" · "He Flew Home Cash on Delivery"
 
 ## Script (beats labeled)
