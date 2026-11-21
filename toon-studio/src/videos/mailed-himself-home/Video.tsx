@@ -5,6 +5,7 @@ import {SHOTLIST, type Shot} from './kit';
 import * as B1 from './shots/batch1';
 import * as B2 from './shots/batch2';
 import * as B3 from './shots/batch3';
+import * as B4 from './shots/batch4';
 
 loadFont({family: 'Bangers', url: staticFile('fonts/Bangers.woff2'), weight: '400'});
 
@@ -32,6 +33,12 @@ export const SHOT_COMPONENTS: Record<string, React.FC<{shot: Shot}>> = {
   s21: B3.S21,
   s22: B3.S22,
   s23: B3.S23,
+  s24: B4.S24,
+  s25: B4.S25,
+  s26: B4.S26,
+  s27: B4.S27,
+  s28: B4.S28,
+  s29: B4.S29,
 };
 
 /** Placeholder for shots not built yet (STATE 7 in progress). */
