@@ -119,12 +119,14 @@ export const motion = (
     case 'jump': {
       // squash, launch, overshoot, land with a squash. Arms/legs BLEND in and out (no 1-frame snaps).
       const crouch = 0.25, air = 0.55;
+      // every squash change eases over ≥ 2 frames: no single-frame pops (flicker QC)
+      const L = crouch + air;
       out.squash =
         t < crouch
           ? interpolate(t, [0, crouch], [1, 0.84], clamp)
-          : t < crouch + air
-            ? interpolate(t, [crouch, crouch + 0.1, crouch + air], [1.12, 1.03, 1.0], clamp)
-            : interpolate(t, [crouch + air, crouch + air + 0.08, crouch + air + 0.3], [0.86, 1.04, 1], clamp);
+          : t < L
+            ? interpolate(t, [crouch, crouch + 0.07, crouch + 0.17, L], [0.84, 1.12, 1.03, 1.0], clamp)
+            : interpolate(t, [L, L + 0.07, L + 0.2, L + 0.4], [1.0, 0.88, 1.03, 1], clamp);
       if (t >= crouch && t < crouch + air) out.rootY = Math.sin(((t - crouch) / air) * Math.PI) * 1.8;
       // pose weight: arms swing back in the crouch, up in the air, settle 0.25 s after landing
       const up = interpolate(t, [crouch - 0.08, crouch + 0.08, crouch + air - 0.1, crouch + air + 0.25], [0, 1, 1, 0], {
