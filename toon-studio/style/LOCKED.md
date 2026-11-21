@@ -25,7 +25,7 @@ Approved style and rule decisions, newest last. These override `MODEL_BRIEF.md` 
 - Set-building rule (from the window and shelf fixes): no two visible surfaces may share a plane. Keep a gap of at least 0.03 units between stacked or inset surfaces. Every preview runs `tools/flicker_check.py`.
 - Silent test renders are expected until STATE 5. Always say so when sending a test.
 
-## STATE 3: cast, sets and props (proposed; pending approval)
+## STATE 3: cast, sets and props (APPROVED)
 
 - Cast (`src/characters/cast.ts`):
   - ODD: teal hoodie, swoop tuft, cream head.
